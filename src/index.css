@@ -2,11 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Minimalist';
+  src: url('/public/assets/fonts/Minimalist-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Minimalist';
+  src: url('/public/assets/fonts/Minimalist-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Minimalist';
+  src: url('/public/assets/fonts/Minimalist-DemiBold.woff') format('woff');
+  font-weight: medium;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Minimalist';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,4 +33,57 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.color-background-1 {
+  background:
+    linear-gradient(grey, transparent),
+    linear-gradient(to top left, rgb(50, 49, 49), transparent),
+    linear-gradient(to top right, rgb(199, 197, 181), transparent), url(https://grainy-gradients.vercel.app/noise.svg) !important;
+  background-blend-mode: multiply;
+  margin-right:-6%;
+  filter: contrast(120%) brightness(100%);
+}
+.color-background-2 {
+  margin-bottom:-10%;
+  margin-right:-18%;
+
+  background:
+    linear-gradient(rgb(231, 158, 0), transparent),
+    linear-gradient(to top left, rgb(238, 210, 30), transparent),
+    linear-gradient(to top right, rgb(199, 197, 181), transparent), url(https://grainy-gradients.vercel.app/noise.svg) !important;
+  background-blend-mode: multiply;
+  filter: contrast(120%) brightness(100%);
+}
+
+
+.box {
+  transform: scale(0.9);
+  opacity: 1; 
+  transition: ease-in-out 0.5s;
+  transform: translateY(-50%) translateX(-20%);
+
+
+}
+.box-2 {
+  transform: scale(0.8); 
+  opacity: 1; 
+  transition: ease-in-out 0.5s; 
+  transform: translateX(20%);
+
+}
+
+.scrolled .box {
+  transform: scale(1.2); /* Scale the box */
+  opacity: 0.95; /* Reduce opacity */
+  transition: ease-in-out 0.5s; /* Add transition */
+  transform: translateY(10%) translateX(50%);
+
+}
+.scrolled .box-2 {
+  transform: scale(1.24); /* Scale the box */
+  opacity: 0.9; /* Reduce opacity */
+  transition: ease-in-out 0.5s; /* Add transition */
+  transform: translateX(-10%);
+
 }
