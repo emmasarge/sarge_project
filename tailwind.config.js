@@ -5,8 +5,13 @@ module.exports = {
 ],
   theme: {
     extend: {
-      fontFamily: {
-        "Minimalist": "Minimalist",
+      colors: {
+        dark: '#221C07',
+        mustard: '#F1B417'
+      },
+      borderColor: {
+        mustard: '#F1B417',
+        offWhite: '#FAFAFA',
       }
     },
   },

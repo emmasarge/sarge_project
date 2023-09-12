@@ -25,7 +25,9 @@
 
 body {
   margin: 0;
-  font-family: 'Minimalist';
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+  color: #221C07;
+  background-color: #FAFAFA;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,11 +37,100 @@ code {
     monospace;
 }
 
+/* NAVBAR STYLING */
+
+.navbar-menu {
+  
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.3s ease, opacity 0.3s ease;
+  transform: translateX(100%);
+
+}
+
+.navbar-menu.nav_active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  box-shadow: -5px -2px 6px -5px rgba(55, 43, 1, 0.2);
+  width: 70%;
+  margin-right: -10px;
+  padding-right: 20px;
+  padding-left:10px;
+  padding-top: 30px;
+  border-radius: 4px;
+  top: 0;
+  color:#221C07;
+  max-width: 300px; 
+  background-color: #fafafa;
+  opacity: 1;
+  animation: slideIn 0.3s ease forwards, fadeIn 0.3s ease forwards;
+}
+
+.navbar-menu.nav_closing {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-width 0.3s ease, opacity 0.3s ease;
+  animation: slideOut 0.3s ease forwards, fadeOut 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.svg_icon {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  fill: #221C07;
+}
+
+.close_button {
+  height: 1.25em;
+  cursor: pointer;
+}
+
+/* Homepage animation */
+
 .color-background-1 {
   background:
-    linear-gradient(grey, transparent),
-    linear-gradient(to top left, rgb(50, 49, 49), transparent),
-    linear-gradient(to top right, rgb(199, 197, 181), transparent), url(https://grainy-gradients.vercel.app/noise.svg) !important;
+    linear-gradient(rgb(79, 64, 47), transparent),
+    linear-gradient(to top left, rgb(75, 66, 52), transparent),
+    linear-gradient(to top right, rgb(88, 81, 70), transparent), url(https://grainy-gradients.vercel.app/noise.svg) !important;
   background-blend-mode: multiply;
   margin-right:-6%;
   filter: contrast(120%) brightness(100%);
@@ -49,34 +140,77 @@ code {
   margin-right:-18%;
 
   background:
-    linear-gradient(rgb(231, 158, 0), transparent),
-    linear-gradient(to top left, rgb(238, 210, 30), transparent),
-    linear-gradient(to top right, rgb(199, 197, 181), transparent), url(https://grainy-gradients.vercel.app/noise.svg) !important;
+    linear-gradient(rgb(241, 180, 23), transparent),
+    linear-gradient(to top left, rgb(241, 180, 23), transparent),
+    linear-gradient(to top right, rgb(239, 203, 119), transparent), url(https://grainy-gradients.vercel.app/noise.svg) !important;
   background-blend-mode: multiply;
   filter: contrast(120%) brightness(100%);
 }
 
 
 .box {
-  transform: scale(0.9) translateY(-50%) translateX(-20%);
+  transform: scale(1) translateY(-50%) translateX(-20%);
   opacity: 1;
   transition: ease-in-out 0.5s;
 }
 
 .box-2 {
-  transform: scale(0.85) translateX(20%);
+  transform: scale(1) translateX(20%);
   opacity: 1;
   transition: ease-in-out 0.5s;
 }
 
 .scrolled .box {
-  transform: scale(1) translateY(10%) translateX(50%);
+  transform: scale(1.125) translateY(-5%) translateX(30%);
   opacity: 0.95;
   transition: ease-in-out 0.5s;
 }
 
 .scrolled .box-2 {
-  transform: scale(1.15) translateX(-10%);
-  opacity: 0.9;
+  transform: scale(1.125) translateX(-20%) translateY(20%);
+  opacity: 1;
   transition: ease-in-out 0.5s;
+}
+
+
+@media screen and (max-width: 450px) {
+  .box {
+    transform: scale(1.25) translateY(45%) translateX(-25%);
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+    z-index: -9999!important;
+  }
+  
+  .box-2 {
+    transform: scale(1.2) translateX(30%) translateY(-35%);
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+    z-index: -999!important;
+
+  }
+  
+  .scrolled .box {
+    transform: scale(1) translateY(40%) translateX(25%);
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+    z-index: -999!important;
+  }
+  
+  .scrolled .box-2 {
+    transform: scale(1.3) translateX(-30%) translateY(-38%);
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+    z-index: -999!important;
+
+  }
+}
+  
+
+.shadow {
+  box-shadow: 0 0 10px 2px rgba(43, 27, 10, 0.059);
+}
+
+.menu {
+  z-index: 9999!important;
+  
 }
