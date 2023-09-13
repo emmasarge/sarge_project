@@ -8,8 +8,9 @@ import { FooterOrganism } from "../components/organsims/footer/Footer";
 export const Layout = () => {
   return (
      <div className="min-h-screen">
-        <main role="main" className="w-full">
-        <NavbarOrganism /> <Outlet /> <FooterOrganism />
+        <main role="main" className="w-full min-h-screen">
+        <NavbarOrganism /> <Outlet />
+        <FooterOrganism/>
         </main>
       </div>
   );

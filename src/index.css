@@ -127,6 +127,7 @@ code {
 /* Homepage animation */
 
 .color-background-1 {
+  z-index: -9999!important;
   background:
     linear-gradient(rgb(79, 64, 47), transparent),
     linear-gradient(to top left, rgb(75, 66, 52), transparent),
@@ -138,6 +139,7 @@ code {
 .color-background-2 {
   margin-bottom:-10%;
   margin-right:-18%;
+  z-index: -9999!important;
 
   background:
     linear-gradient(rgb(241, 180, 23), transparent),
@@ -148,63 +150,6 @@ code {
 }
 
 
-.box {
-  transform: scale(1) translateY(-50%) translateX(-20%);
-  opacity: 1;
-  transition: ease-in-out 0.5s;
-}
-
-.box-2 {
-  transform: scale(1) translateX(20%);
-  opacity: 1;
-  transition: ease-in-out 0.5s;
-}
-
-.scrolled .box {
-  transform: scale(1.125) translateY(-5%) translateX(30%);
-  opacity: 0.95;
-  transition: ease-in-out 0.5s;
-}
-
-.scrolled .box-2 {
-  transform: scale(1.125) translateX(-20%) translateY(20%);
-  opacity: 1;
-  transition: ease-in-out 0.5s;
-}
-
-
-@media screen and (max-width: 450px) {
-  .box {
-    transform: scale(1.25) translateY(45%) translateX(-25%);
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-    z-index: -9999!important;
-  }
-  
-  .box-2 {
-    transform: scale(1.2) translateX(30%) translateY(-35%);
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-    z-index: -999!important;
-
-  }
-  
-  .scrolled .box {
-    transform: scale(1) translateY(40%) translateX(25%);
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-    z-index: -999!important;
-  }
-  
-  .scrolled .box-2 {
-    transform: scale(1.3) translateX(-30%) translateY(-38%);
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-    z-index: -999!important;
-
-  }
-}
-  
 
 .shadow {
   box-shadow: 0 0 10px 2px rgba(43, 27, 10, 0.059);
@@ -213,4 +158,13 @@ code {
 .menu {
   z-index: 9999!important;
   
+} 
+
+.footer {
+  position: relative; /* or 'sticky' depending on your preference */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fafafa; /* Change this to your desired background color */
+  z-index: 100; /* Adjust the z-index as needed */
 }

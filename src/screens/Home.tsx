@@ -1,11 +1,9 @@
-import { DesktopLanding } from "../components/organsims/home-landing/DesktopLanding";
+import { LandingOrgansim } from "../components/organsims/home-landing/LandingOrganism";
 
 export const Home = () => {
-    return (
-        <main id="home">
-             <div className='flex justify-center flex-col items-center w-full '>
-        <DesktopLanding />
-        </div>
-        </main>
-    )
+  return (
+    <div className="flex h-full justify-center mt-10 flex-col items-center w-full ">
+      <LandingOrgansim />
+    </div>
+  );
 };
