@@ -2,19 +2,21 @@ import * as React from "react";
 import { useEffect, useState } from "react"; 
 
 interface Props {
-  heightSize: string | number;
-  widthSize: string | number;
+  height_size: number;
+  width_size:  number;
+  parent_container_id: string;
 }
 
 export const DownArrowIcon = (props: Props) => {
-  const [iconSize, setIconSize] = useState({ width: "auto", height: "auto" });
+  const [iconSize, setIconSize] = useState({ width: "100%", height: "100%" });
 
   useEffect(() => {
     const handleResize = () => {
-      const parent = document.getElementById("parent-container"); // Replace with the actual ID or reference to the parent container
+      const parent = document.getElementById(props.parent_container_id); 
       if (parent) {
         const width = parent.clientWidth;
         const height = parent.clientHeight;
+
         setIconSize({
           width: `${(width * 0.8).toFixed(2)}px`, 
           height: `${(height * 0.8).toFixed(2)}px`, 

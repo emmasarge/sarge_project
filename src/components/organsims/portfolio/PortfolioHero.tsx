@@ -5,17 +5,17 @@ export const PortfolioHeroOrgansim = () => {
   return (
     <div
       id="portfolio-hero"
-      className=" flex w-full justify-center min-h-[70vh]"
+      className=" flex w-full justify-center min-h-[50vh]"
     >
       <div className="flex flex-col w-11/12 items-start justify-center">
         
-        <div className="max-w-[1000px]">
-        <Parallax easing={'easeInOut'} translateY={[10, -10]}>
-          <h1 className="text-[2.5em] text-dark tracking-wide leading-[1.2em]">Portfolio and skills.</h1>
+        <div className="max-w-[1000px] pt-[13%]">
+        <Parallax easing={'easeInOut'} translateY={[-8, 8]}>
+          <h1 className="text-[1.5em] lg:text-[2.5em] text-dark tracking-wide leading-[1.2em]">Portfolio and skills.</h1>
           </Parallax>
-          <Parallax easing={'easeInOut'} translateY={[-10, 10]}>
+          <Parallax easing={'easeInOut'} translateY={[-8, 8]}>
 
-           <h2 className="text-[2em] text-dark tracking-wide leading-[1.125em]">
+           <h2 className="text-[1.35em] mt-[1em] lg:text-[2em] text-dark tracking-wide leading-[1.125em]">
             With a background in the arts and digital marketing and experience
             working for companies with e-commerce, D2C, B2B, SAAS, white label,
             internal dashboards and app platforms, Emma offers a valuable
@@ -26,9 +26,9 @@ export const PortfolioHeroOrgansim = () => {
         </div>
       
       
-        <Parallax easing={'easeInOut'} translateY={[-10, 10]}>
-        <div className="flex mt-10 ">
-          <DownArrowIcon heightSize={66} widthSize={18} />
+        <Parallax easing={'easeInOut'} translateY={[-8, 8]}>
+        <div id="hero-arrow" className="flex mt-10 w-full ">
+          <DownArrowIcon parent_container_id={'hero-arrow'} height_size={66} width_size={18} />
         </div>
         </Parallax>
       </div>

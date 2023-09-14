@@ -168,3 +168,8 @@ code {
   background-color: #fafafa; /* Change this to your desired background color */
   z-index: 100; /* Adjust the z-index as needed */
 }
+
+.html5-video-player:not(.ytp-transparent), .html5-video-player.unstarted-mode, .html5-video-player.ad-showing, .html5-video-player.ended-mode {
+
+  background-color: #fafafa!important;
+}
