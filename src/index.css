@@ -173,3 +173,31 @@ code {
 
   background-color: #fafafa!important;
 }
+
+input[type="email"]:focus,
+input[type="text"]:focus {
+  outline: none; /* Remove the default blue outline */
+  border: 2px solid #221C07; /* Add your custom border style if needed */
+  background-color: #fafafa!important; /* Add your custom background color if needed */
+}
+
+textarea:focus {
+  outline: none; /* Remove the default blue outline */
+  border: 2px solid #221C07; /* Add your custom border style if needed */
+  background-color: #fafafa!important; /* Add your custom background color if needed */
+}
+
+input[type="email"]::selection,
+input[type="text"]::selection {
+  background-color: #fafafa!important; /* Change to your desired background color */
+  color: #221C07; /* Change to your desired text color */
+}
+
+input[type="email"]:-webkit-autofill,
+input[type="text"]:-webkit-autofill {
+  background: #fafafa !important;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #fafafa inset !important;
+}
