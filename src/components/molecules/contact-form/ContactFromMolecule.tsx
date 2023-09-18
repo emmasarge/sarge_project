@@ -58,7 +58,7 @@ export const ContactFormMolecule: React.FC = () => {
             please get in touch with the form below.
           </h2>
         </div>
-        <Parallax easing={'easeInOut'} translateY={[-3, 3]}>
+        <Parallax easing={'easeOut'} translateY={[-3, 3]}>
         <div id="hero-arrow" className="flex mt-10 w-10/12 lg:w-full ">
           <DownArrowIcon parent_container_id={'hero-arrow'} height_size={66} width_size={18} />
         </div>

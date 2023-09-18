@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { YouTubeVideoMolecule } from "../../molecules/youtube-video/YouTubeVideoMolecule";
 import { Parallax } from "react-scroll-parallax";
+import useIsMobile from "../../../hooks/IsMobile";
 
 interface VideoProps {
   video_1: {
@@ -34,6 +35,7 @@ interface PortfolioExampleSectionOrganismProps {
 export const PortfolioExampleSectionOrganism = (
   props: PortfolioExampleSectionOrganismProps
 ) => {
+  const isMobile = useIsMobile();
   const [multipleVideos, setMultipleVideos] = useState<boolean>(false);
   const [reducedWidth, setReducedWidth] = useState<number>(window.innerWidth);
   const [reducedHeight, setReducedHeight] = useState<number>(
@@ -54,25 +56,31 @@ export const PortfolioExampleSectionOrganism = (
   const intitialWindowHeight = window.innerWidth / 2.225;
 
   useEffect(() => {
-    const reducedWindowWidth = intitialWindowWidth * 0.8;
-    setReducedWidth(reducedWindowWidth);
+    if (isMobile) {
+      const reducedWindowWidth = intitialWindowWidth * 0.85;
+      setReducedWidth(reducedWindowWidth);
 
-    const windowHeight = intitialWindowHeight * 0.9;
-    setReducedHeight(windowHeight);
-  }, [intitialWindowWidth, intitialWindowHeight]);
+      const windowHeight = intitialWindowHeight * 0.95;
+      setReducedHeight(windowHeight);
+    } else {
+      const reducedWindowWidth = intitialWindowWidth * 0.8;
+      setReducedWidth(reducedWindowWidth);
+
+      const windowHeight = intitialWindowHeight * 0.9;
+      setReducedHeight(windowHeight);
+    }
+  }, [intitialWindowWidth, intitialWindowHeight, isMobile]);
 
   useEffect(() => {
     if (video_2_url && video_3_url) {
       setMultipleVideos(true);
     }
   }, [video_2_url, video_3_url]);
-  <div className=" border-b-2 border-[#221C07] pt-8 lg:pt-12 mb-8"></div>
-
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <div className="w-11/12 flex flex-col items-start border-b-2 border-[#221C07] pb-5 mb-8 lg:mb-20 ">
-        <Parallax easing={"easeInOut"} speed={4} opacity={[0.7, 1]}>
+      <div className="w-11/12 flex flex-col items-start  ">
+        <Parallax easing={"easeOut"} speed={6} opacity={[0.7, 1]}>
           <div
             id={`${props.companyName}-description-section`}
             className="w-full flex-col "
@@ -98,11 +106,18 @@ export const PortfolioExampleSectionOrganism = (
 
         <div
           id={`${props.companyName}-video-section`}
-          className="flex w-full flex-col  mt-6 md:mt-8 lg:mt-14 mb-10 lg:mb-14 items-start justify-between"
+          className="flex w-full flex-col  mt-4 md:mt-8 lg:mt-4 lg:mb-4  items-start justify-between"
         >
-          <Parallax easing={"easeInOut"} speed={4} opacity={[0.7, 1]}>
+          <Parallax
+            className={
+              multipleVideos ? "mb-0" : "border-b-2 border-[#221C07] pb-12 lg:pb-20 "
+            }
+            easing={"easeOut"}
+            speed={6}
+            opacity={[0.7, 1]}
+          >
             <div className="flex flex-col w-full lg:w-min">
-              <div className="text-[0.75em] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2 lg:mb-3  leading-[1.2em] text-dark">
+              <div className="text-[0.85em] w-[95%] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
                 {video_1_title}
               </div>
               <div className="flex w-full lg:w-11/12">
@@ -115,12 +130,17 @@ export const PortfolioExampleSectionOrganism = (
             </div>
           </Parallax>
           {multipleVideos && (
-            <Parallax easing={"easeInOut"} speed={4} opacity={[0.7, 1]}>
-              <div className="flex flex-row w-full lg:w-11/12 items-start justify-between mt-10 lg:mt-16">
+            <Parallax
+              className="border-b-2 border-[#221C07] pb-20 mb-0 "
+              easing={"easeOut"}
+              speed={6}
+              opacity={[0.7, 1]}
+            >
+              <div className="flex flex-row w-full lg:w-11/12 items-start justify-between mt-4 lg:mt-8">
                 <>
                   {video_2_url !== undefined && video_2_title && (
                     <div className="flex w-full flex-col mr-3 lg:mr-[5em]">
-                      <div className="text-[0.75em] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2 lg:mb-3  leading-[1.2em] text-dark">
+                      <div className="text-[0.85em]  lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
                         {video_2_title}
                       </div>
                       <div className="flex w-full ">
@@ -138,7 +158,7 @@ export const PortfolioExampleSectionOrganism = (
                 <>
                   {video_3_url !== undefined && video_3 && (
                     <div className="flex w-full flex-col  ">
-                      <div className="text-[0.75em] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2 lg:mb-3  leading-[1.2em] text-dark">
+                      <div className="text-[0.85em]   lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
                         {video_3_title}
                       </div>
                       <div className="flex w-full ">
@@ -155,10 +175,8 @@ export const PortfolioExampleSectionOrganism = (
                 </>
               </div>
             </Parallax>
-            
           )}
         </div>
-    
       </div>
     </div>
   );

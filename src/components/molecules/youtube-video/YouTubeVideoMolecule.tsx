@@ -15,7 +15,8 @@ export const YouTubeVideoMolecule = (props: YouTubeVideoMoleculeProps) => {
         loop={true}
         playing={true}
         muted={true}
-        controls={false} 
+        fullscreen={true}
+        controls={true} 
         style={{border: '5px solid #221C07'}}
         height={props.embedHeight}
         width={props.embedWidth}
