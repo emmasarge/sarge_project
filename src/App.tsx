@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes,   } from "react-router-dom";
+
 import { Helmet } from "react-helmet";
 import { ParallaxProvider } from "react-scroll-parallax";
 
@@ -10,6 +11,7 @@ import { NoPage } from "./screens/NoPage";
 import { Portfolio } from "./screens/Portfolio";
 import { About } from "./screens/About";
 import { Contact } from "./screens/Contact";
+import ScrollToTop from "./hooks/UseScrollToTop";
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
       </Helmet>
 
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />

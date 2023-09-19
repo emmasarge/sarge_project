@@ -8,7 +8,7 @@ const useDeviceDetect = () => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
 
-      const mobileMaxWidth = 767; // Adjust as needed
+      const mobileMaxWidth = 539; // Adjust as needed
       const tabletMaxWidth = 1023; // Adjust as needed
 
       setIsMobile(windowWidth <= mobileMaxWidth);

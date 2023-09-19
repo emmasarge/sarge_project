@@ -2,11 +2,11 @@ import { SkillListSearchMolecule } from "../components/molecules/skills/SkillLis
 import { PortfolioExampleSectionOrganism } from "../components/organsims/portfolio/PortfolioExampleSection";
 import { PortfolioHeroOrgansim } from "../components/organsims/portfolio/PortfolioHero";
 import { useApiRequest } from "../hooks/API";
-
-import { ReactComponent as Spinner } from '../assets/icons/spinner.svg';
+import { ReactComponent as Spinner } from "../assets/icons/spinner.svg";
+import { Helmet } from "react-helmet";
 
 export const Portfolio = () => {
-  const url = "https://sarge-api-23-8cdf3807bdf0.herokuapp.com/jobs/";
+  const url = process.env.REACT_APP_API_URL || "";
   const { data, loading, error } = useApiRequest(url);
 
   const contentOrder = [
@@ -18,52 +18,80 @@ export const Portfolio = () => {
   ];
 
   if (loading) {
-    return <div className="h-[100vh] bg-[#fafafa] w-screen justify-center py-30 mt-72 items-center"><Spinner/></div> 
+    return (
+      <div className="h-[100vh] min-h-screen bg-[#fafafa] justify-center  flex  w-full items-center">
+        <div>
+          <div className="flex flex-col w-full py-20 lg:w-11/12 mx-auto">
+            <PortfolioHeroOrgansim />
+          </div>
+          <div className="fixed flex mx-auto w-fit mb-20">
+            <Spinner />
+          </div>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
-    return <p>Error: {error}</p>;
+    return (
+      <div className="min-h-screen flex flec-col w-full justify-center items-center">
+        <div className="mb-20 w-10/12">
+          <p className="text-[1.5em] text-dark leading-[1.2em]">
+            Error: {error}
+          </p>
+        </div>
+      </div>
+    );
   }
 
   if (!data) {
-    return null; 
+    return null;
   }
 
   const customSort = (a: any, b: any) => {
     const indexA = contentOrder.indexOf(a.company_name);
     const indexB = contentOrder.indexOf(b.company_name);
 
-    if (indexA === -1) return 1; 
-    if (indexB === -1) return -1; 
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
 
-    return indexA - indexB; 
+    return indexA - indexB;
   };
 
   const sortedData = data.sort(customSort);
   return (
-    <div className="w-full flex flex-col justify-center items-center min-h-screen py-20  overflow-y-scroll">
-      <div className="flex flex-col w-full  lg:w-11/12 mx-autp">
-        <PortfolioHeroOrgansim />
-        <div className="w-full justify-center lg:pt-10 pb-0">
-          {sortedData.map((job: any, index: number) => {
-            return (
-              <div key={index}>
-                <PortfolioExampleSectionOrganism
-                  companyName={job.company_name}
-                  companyURL={job.company_url}
-                  companyDescription={job.company_description}
-                  projectDescription_1={job.project_description.paragraph_1}
-                  projectDescription_2={job.project_description.paragraph_2}
-                  video_title_1={job.video_title_1}
-                  videos={job.project_videos}
-                  video_url_1={job.video_url_1}
-                />
-              </div>
-            );
-          })}
+    <>
+      <Helmet>
+        <title>Emma Sargeant | Portfolio & Skills </title>
+        <meta
+          name="description"
+          content="Emma Sargeant is an experienced frontend developer. She builds web and mobile iOS and Android apps using React, React Native, Python, MongoDB, Shopify and more.  "
+        />
+      </Helmet>
+      <div className="w-full flex flex-col justify-center items-center min-h-screen py-20  overflow-y-scroll">
+        <div className="flex flex-col w-full  lg:w-11/12 mx-auto">
+          <PortfolioHeroOrgansim />
+          <div className="w-full justify-center lg:pt-10 pb-0">
+            {sortedData.map((job: any, index: number) => {
+              return (
+                <div key={index}>
+                  <PortfolioExampleSectionOrganism
+                    companyName={job.company_name}
+                    companyURL={job.company_url}
+                    companyDescription={job.company_description}
+                    projectDescription_1={job.project_description.paragraph_1}
+                    projectDescription_2={job.project_description.paragraph_2}
+                    video_title_1={job.video_title_1}
+                    videos={job.project_videos}
+                    video_url_1={job.video_url_1}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <SkillListSearchMolecule />
         </div>
-        <SkillListSearchMolecule />
       </div>
-    </div>
+    </>
   );
 };

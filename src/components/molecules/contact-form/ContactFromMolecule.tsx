@@ -47,38 +47,61 @@ export const ContactFormMolecule: React.FC = () => {
 
   return (
     <div className="w-full flex flex-col justify-center items-center py-20">
-      <Parallax className="mx-auto w-11/12 flex flex-col" speed={0} translateY={[2, -2]} opacity={[1, 0.9]}>
-        <div className="w-11/12 lg:w-10/12 mt-20">
+      <Parallax
+        className="mx-auto text-[1em] md:text-[1.125em] lg:text-[1em] w-full lg:w-11/12 flex pb-2  lg:mb-[5%] flex-col"
+        speed={4}
+        opacity={[1, 0.7]}
+        easing={"easeOut"}
+
+      >
+        <div className="w-[95%] lg:w-10/12 mt-[20%]">
           <h1 className=" text-[1.75em] lg:text-[2.25em] tracking-wide">
             Contact.
           </h1>
           <h2 className=" text-[1.5em] lg:text-[2em] tracking-wide leading-[1.125em]">
-            If you are interested in working with Emma Sargeant for a freelance
-            developer and digital marketing consultancy for web or app project,
-            please get in touch with the form below.
+            Please feel free to use the form below to get in touch, request a
+            resume, or ask any questions.
+          </h2>
+          <h2 className=" text-[1.5em] mt-3 lg:text-[2em] tracking-wide leading-[1.125em]">
+            Emma is currently available for freelance web and app development.
           </h2>
         </div>
-        <Parallax easing={"easeOut"}
-            speed={6}
-            opacity={[0.7, 1]}>
-        <div id="hero-arrow" className="flex  mt-10 w-10/12 lg:w-full ">
-          <DownArrowIcon parent_container_id={'hero-arrow'} height_size={66} width_size={18} />
-        </div>
+        <Parallax
+          className="mt-4 pb-8 lg:pt-8"
+          easing={"easeOut"}
+          speed={6}
+          opacity={[0.7, 1]}
+          translateY={[-3, 3]}
+        >
+          <div
+            id="hero-arrow"
+            className="flex   pt-[12%] md:mt-[13%] w-10/12 lg:w-full "
+          >
+            <DownArrowIcon
+              parent_container_id={"hero-arrow"}
+              height_size={66}
+              width_size={18}
+            />
+          </div>
         </Parallax>
       </Parallax>
-      <Parallax className="w-full justify-start items-start mt-4 flex flex-col pb-12" easing={"easeOut"}
-            speed={6}
-            opacity={[0.7, 1]}>
+      <Parallax
+        className="pt-4 w-full justify-start items-start lg:mt-4 flex flex-col pb-12"
+        easing={"easeOut"}
+        speed={4}
+        opacity={[1, 0.7]}
+        translateY={[-3, 4]}
+      >
         <form
           id="contact-form"
-          className=" mt-[-0.75em] lg:mt-[1em] mb-20 text-[1.25em] lg:text-[1.125em] w-11/12 flex flex-col lg:flex-row mx-auto justify-start items-start"
+          className=" -mt-[17%] lg:mt-[1em] mb-20 text-[1.25em] lg:text-[1.125em] w-full  lg:w-11/12 flex flex-col lg:flex-row mx-auto justify-start items-start"
         >
           <div className="flex-col w-full lg:w-1/3">
             <input
               type="text"
               name="from_name"
               placeholder="Name"
-              className=" bg-[#FAFAFA] placeholder:text-dark placeholder:font-light mb-4  text-dark blur-none focus-visible:bg-[#FAFAFA] resize-none w-11/12 max-w-[800px] px-3 py-1.5 border-2 border-[#221C07]"
+              className=" bg-[#FAFAFA] placeholder:text-dark placeholder:font-light mb-4  text-dark blur-none focus-visible:bg-[#FAFAFA] resize-none w-full lg:w-11/12 max-w-[800px] px-3 py-1.5 border-[1.5px] border-[#221C07]"
               required
             />
 
@@ -86,7 +109,7 @@ export const ContactFormMolecule: React.FC = () => {
               type="email"
               name="email"
               placeholder="Email"
-              className=" resize-none placeholder:text-dark placeholder:font-light  text-dark bg-[#FAFAFA] w-11/12 mb-4 max-w-[800px] px-3 py-1.5 border-2 border-[#221C07]"
+              className=" resize-none placeholder:text-dark placeholder:font-light  text-dark bg-[#FAFAFA] w-full lg:w-11/12 mb-4 max-w-[800px] px-3 py-1.5 border-[1.5px] border-[#221C07]"
               required
             />
           </div>
@@ -94,12 +117,12 @@ export const ContactFormMolecule: React.FC = () => {
             <textarea
               rows={7}
               name="message"
-              className=" resize-none placeholder:text-dark w-11/12  bg-[#fafafa] text-dark placeholder:font-light max-w-[800px] px-3 mb-0 py-1.5 border-2 border-[#221C07]"
+              className=" resize-none placeholder:text-darkw-full lg:w-11/12  bg-[#fafafa] text-dark placeholder:font-light max-w-[800px] px-3 mb-0 py-1.5 border-[1.5px] border-[#221C07]"
               placeholder="Type your message here."
               required
             />
             <input
-              className="mt-6 w-11/12 lg:max-w-[300px]  text-[1.125em] lg:text-[1.25em] lg:mt-5 border-2 text-dark border-[#2B2308] bg-[#fafafa]  hover:duration-300 hover:bg-[#221C07] hover:text-white  hover:tracking-widest  transition  duration-300 ease-in-out  cursor-pointer rounded-full py-1 px-[4em] tracking-wider shadow-sm"
+              className="mt-6 w-full lg:w-11/12 lg:max-w-[300px]  text-[1.125em] lg:text-[1.25em] lg:mt-5 border-[1.5px] text-dark border-[#2B2308] bg-[#fafafa]  hover:duration-300 hover:bg-[#221C07] hover:text-white  hover:tracking-widest  transition  duration-300 ease-in-out  cursor-pointer rounded-full py-1 px-[4em] tracking-wider shadow-sm"
               type="submit"
               value="Send"
             />

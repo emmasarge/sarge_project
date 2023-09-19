@@ -39,7 +39,7 @@ export const DownArrowIcon = (props: Props) => {
       width={iconSize.width}
       height={iconSize.height}
       fill="none"
-      className="flex h-11/12"
+      className="flex w-11/12"
       {...props}
     >
       <path
