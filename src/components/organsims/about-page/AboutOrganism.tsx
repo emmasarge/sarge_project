@@ -112,7 +112,7 @@ export const AboutOrganism = () => {
               opacity={[1, 0.8]}
             >
               <div className="flex w-10/12 lg:w-full xl:w-11/12 lg:-mr-8 xl:mr-0 xl:pl-[2em] lg:mt-2 ">
-                <img src={EmmaImg} alt="Emma Sargeant" className="shadow-md" />
+                <img loading="lazy" src={EmmaImg} alt="Emma Sargeant" className="shadow-md" />
               </div>
             </Parallax>
           )}
