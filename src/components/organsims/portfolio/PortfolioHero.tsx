@@ -27,7 +27,7 @@ export const PortfolioHeroOrgansim = () => {
       
       
         <Parallax className="pb-3" easing={'easeOut'} translateY={[-8, 8]}>
-        <div id="hero-arrow" className="flex mb-0 lg:mb-2 mt-14 md:mt-16 lg:mt-20 w-full ">
+        <div id="hero-arrow" className="flex mb-10 lg:mb-2 mt-14 md:mt-16 lg:mt-20 w-full ">
           <DownArrowIcon parent_container_id={'hero-arrow'} height_size={66} width_size={18} />
         </div>
         </Parallax>
