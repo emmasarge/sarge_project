@@ -193,7 +193,7 @@ export const PortfolioExampleSectionOrganism = (
               </div>
               <div
                 onClick={openModal}
-                className="flex w-full lg:w-[90%] cursor-pointer"
+                className="flex w-full lg:w-[97%] cursor-pointer"
               >
                 <YouTubeVideoMolecule
                   embedURL={video_1_url}
