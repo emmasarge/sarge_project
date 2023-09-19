@@ -16,7 +16,6 @@ export const AboutOrganism = () => {
           <Parallax
             className="mt-4"
             easing={"easeInOut"}
-            speed={2}
             translateY={[-8, 8]}
           >
             <h1 className="text-[1.5em] lg:mt-8 lg:text-[2em] text-dark tracking-wide leading-[1.2em]">
@@ -34,7 +33,6 @@ export const AboutOrganism = () => {
               className="pb-2.5 flex"
               easing={"easeOut"}
               translateY={[8, 10]}
-              speed={4}
             >
               <div
                 id="about-arrow"
@@ -89,7 +87,6 @@ export const AboutOrganism = () => {
             <Parallax
               className="flex w-full pt-[16%]  justify-start lg:justify-end"
               easing={"easeInOut"}
-              speed={4}
               translateY={[10, -10]}
             >
               <div className="flex w-[95%] lg:w-9/12  xl:w-10/12 pr-[2em] lg:-mt-8 ">
@@ -100,7 +97,6 @@ export const AboutOrganism = () => {
             <Parallax
               className="flex w-full pt-[10%]  items-strt justify-start lg:justify-end"
               easing={"easeInOut"}
-              speed={4}
               translateY={[10, -10]}
             >
               <div className="flex justify-start  items-start w-7/12 pt-12 pb-6 lg:w-9/12 xl:w-10/12 pr-[2em] lg:-mt-8 ">
@@ -112,7 +108,6 @@ export const AboutOrganism = () => {
               className="flex w-full  justify-start lg:justify-end"
               easing={"easeInOut"}
               scale={[0.95, 1]}
-              speed={10}
               translateY={[-10, 10]}
               opacity={[1, 0.8]}
             >
@@ -128,7 +123,6 @@ export const AboutOrganism = () => {
         <Parallax
           className=" flex mt-[18%] md:mt-[5%] w-[95%] lg:w-10/12 flex-col  items-start  justify-start lg:pr-10"
           easing={"easeInOut"}
-          speed={10}
           translateY={[-10, 10]}
           opacity={[1, 0.8]}
         >

@@ -49,7 +49,6 @@ export const ContactFormMolecule: React.FC = () => {
     <div className="w-full flex flex-col justify-center items-center py-20">
       <Parallax
         className="mx-auto text-[1em] md:text-[1.125em] lg:text-[1em] w-full lg:w-11/12 flex pb-2  lg:mb-[5%] flex-col"
-        speed={4}
         opacity={[1, 0.7]}
         easing={"easeOut"}
 
@@ -69,7 +68,6 @@ export const ContactFormMolecule: React.FC = () => {
         <Parallax
           className="mt-4 pb-8 lg:pt-8"
           easing={"easeOut"}
-          speed={6}
           opacity={[0.7, 1]}
           translateY={[-3, 3]}
         >
@@ -88,7 +86,6 @@ export const ContactFormMolecule: React.FC = () => {
       <Parallax
         className="pt-4 w-full justify-start items-start lg:mt-4 flex flex-col pb-12"
         easing={"easeOut"}
-        speed={4}
         opacity={[1, 0.7]}
         translateY={[-3, 4]}
       >

@@ -141,7 +141,7 @@ export const PortfolioExampleSectionOrganism = (
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="w-11/12 text-[1em] md:text-[1.125em] lg:text-[1em] flex flex-col items-start  ">
-        <Parallax easing={"easeOut"} speed={4} opacity={[0.7, 1]}>
+        <Parallax easing={"easeOut"}  opacity={[0.7, 1]}>
           <div
             id={`${props.companyName}-description-section`}
             className="w-full flex-col "
@@ -185,7 +185,6 @@ export const PortfolioExampleSectionOrganism = (
                 : "border-b-2 flex w-full border-dark mb-3 md:mb-6 pb-8 md:pb-12 lg:pb-20 "
             }
             easing={"easeOut"}
-            speed={4}
             opacity={[0.7, 1]}
           >
             <div className="flex flex-col w-full lg:w-11/12 pb-3">
@@ -209,7 +208,6 @@ export const PortfolioExampleSectionOrganism = (
               <Parallax
                 className=" flex w-full lg:w-10/12  "
                 easing={"easeOut"}
-                speed={4}
                 opacity={[0.7, 1]}
               >
                 <div className="flex flex-row  md:w-full  items-start justify-center mt-4 lg:mt-8">

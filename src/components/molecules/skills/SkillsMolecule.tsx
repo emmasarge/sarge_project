@@ -4,7 +4,7 @@ export const SkillsMolecule = ({ skills, searchTerm }: any) => {
   console.log(searchTerm);
   return (
     <div className="w-full flex flex-col mb-10 ">
-      <Parallax easing={"easeOut"} speed={6} opacity={[0.7, 1]}>
+      <Parallax easing={"easeOut"}  opacity={[0.7, 1]}>
         <div className="flex flex-row break-inside-avoid-column w-full  flex-wrap justify-start items-start min-h-fit ">
           {skills?.map((skill: any, index: number) => {
             return (

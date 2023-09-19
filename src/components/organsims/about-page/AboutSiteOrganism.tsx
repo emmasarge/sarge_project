@@ -6,7 +6,6 @@ export const AboutSiteOrganism = () => {
       <Parallax
         className="pb-2"
         easing={"easeOut"}
-        speed={3}
         translateY={[6, -6]}
       >
         <h1 className="text-[1.5em] mt-[0.75em] lg:text-[1.75em] text-dark tracking-wide leading-[1.125em] flex flex-wrap ">

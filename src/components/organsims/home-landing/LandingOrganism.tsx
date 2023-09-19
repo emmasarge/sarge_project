@@ -71,7 +71,6 @@ export const LandingOrgansim: FunctionComponent = () => {
                 <Parallax
                   startScroll={2}
                   scaleZ={[1.2, 1]}
-                  speed={5}
                   translateX={[210, 20]}
                   translateY={[10, -50]}
                   className="flex w-auto"
@@ -81,7 +80,6 @@ export const LandingOrgansim: FunctionComponent = () => {
 
                 <Parallax
                   startScroll={1}
-                  speed={3}
                   scaleZ={[1, 1.5]}
                   translateX={['7%', '50%']}
                   translateY={['220%', "120%"]}
@@ -98,7 +96,6 @@ export const LandingOrgansim: FunctionComponent = () => {
                 <Parallax
                   startScroll={2}
                   scaleZ={[1.2, 1]}
-                  speed={5}
                   translateX={['310%', '30%']}
                   translateY={['-90%', '10%']}
                   className="flex w-auto"
@@ -108,7 +105,6 @@ export const LandingOrgansim: FunctionComponent = () => {
 
                 <Parallax
                   startScroll={1}
-                  speed={3}
                   scaleZ={[1, 1.5]}
                   translateX={[-30, 60]}
                   translateY={[120, 200]}
@@ -125,7 +121,6 @@ export const LandingOrgansim: FunctionComponent = () => {
                 <Parallax
                   startScroll={2}
                   scaleZ={[1.2, 1]}
-                  speed={5}
                   translateX={[200, 80]}
                   translateY={[-30, -20]}
                   className="flex w-auto"
@@ -135,7 +130,6 @@ export const LandingOrgansim: FunctionComponent = () => {
 
                 <Parallax
                   startScroll={9}
-                  speed={4}
                   scaleZ={[1, 1.5]}
                   translateX={[-90, 120]}
                   translateY={[40, -40]}
