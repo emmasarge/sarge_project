@@ -48,7 +48,7 @@ export const ContactFormMolecule: React.FC = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center py-20">
       <Parallax
-        className="mx-auto text-[1em] md:text-[1.125em] lg:text-[1em] w-full lg:w-11/12 flex pb-2  lg:mb-[5%] flex-col"
+        className="mx-auto text-[1em] md:text-[1.125em] lg:text-[1em] w-full lg:w-11/12 flex pb-2   flex-col"
         opacity={[1, 0.7]}
         easing={"easeOut"}
 
@@ -73,7 +73,7 @@ export const ContactFormMolecule: React.FC = () => {
         >
           <div
             id="hero-arrow"
-            className="flex   pt-[12%] md:mt-[13%] w-10/12 lg:w-full "
+            className="flex pt-8 pb-4 w-10/12 lg:w-full "
           >
             <DownArrowIcon
               parent_container_id={"hero-arrow"}
@@ -84,14 +84,14 @@ export const ContactFormMolecule: React.FC = () => {
         </Parallax>
       </Parallax>
       <Parallax
-        className="pt-4 w-full justify-start items-start lg:mt-4 flex flex-col pb-12"
+        className="pt-4 w-full justify-start items-start -mt-32 lg:-mt-24 flex flex-col pb-12"
         easing={"easeOut"}
         opacity={[1, 0.7]}
         translateY={[-3, 4]}
       >
         <form
           id="contact-form"
-          className=" -mt-[17%] lg:mt-[1em] mb-20 text-[1.25em] lg:text-[1.125em] w-full  lg:w-11/12 flex flex-col lg:flex-row mx-auto justify-start items-start"
+          className="lg:mt-[1em] mb-20 text-[1.25em] lg:text-[1.125em] w-full  lg:w-11/12 flex flex-col lg:flex-row mx-auto justify-start items-start"
         >
           <div className="flex-col w-full lg:w-1/3">
             <input
@@ -114,12 +114,12 @@ export const ContactFormMolecule: React.FC = () => {
             <textarea
               rows={7}
               name="message"
-              className=" resize-none placeholder:text-darkw-full lg:w-11/12  bg-[#fafafa] text-dark placeholder:font-light max-w-[800px] px-3 mb-0 py-1.5 border-[1.5px] border-[#221C07]"
+              className=" resize-none placeholder:text-dark w-full  lg:w-11/12  bg-[#fafafa] text-dark placeholder:font-light max-w-[800px] px-3 mb-0 py-1.5 border-[1.5px] border-[#221C07]"
               placeholder="Type your message here."
               required
             />
             <input
-              className="mt-6 w-full lg:w-11/12 lg:max-w-[300px]  text-[1.125em] lg:text-[1.25em] lg:mt-5 border-[1.5px] text-dark border-[#2B2308] bg-[#fafafa]  hover:duration-300 hover:bg-[#221C07] hover:text-white  hover:tracking-widest  transition  duration-300 ease-in-out  cursor-pointer rounded-full py-1 px-[4em] tracking-wider shadow-sm"
+              className="mt-6  w-full lg:w-11/12 lg:max-w-[300px]  text-[1.125em] lg:text-[1.25em] lg:mt-8 border-[1.5px] text-dark border-[#2B2308] bg-[#fafafa]  hover:duration-300 hover:bg-[#221C07] hover:text-white  hover:tracking-widest  transition  duration-300 ease-in-out  cursor-pointer rounded-full py-1 px-[4em] tracking-wider shadow-sm"
               type="submit"
               value="Send"
             />

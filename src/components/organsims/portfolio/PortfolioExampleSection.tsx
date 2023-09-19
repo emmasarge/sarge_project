@@ -176,13 +176,13 @@ export const PortfolioExampleSectionOrganism = (
 
         <div
           id={`${props.companyName}-video-section`}
-          className="flex w-full flex-col  mt-5 md:mt-8 lg:mt-4 lg:mb-4  items-start justify-between"
+          className="flex w-full flex-col  mt-10 md:mt-10 lg:mt-12 lg:mb-4  items-start justify-between"
         >
           <Parallax
             className={
               multipleVideos
                 ? "mb-0"
-                : "border-b-2 flex w-full border-dark mb-3 md:mb-6 pb-8 md:pb-12 lg:pb-20 "
+                : "border-b-2 flex w-full border-dark mb-6 md:mb-8 pb-8 md:pb-12 lg:pb-20 "
             }
             easing={"easeOut"}
             opacity={[0.7, 1]}
@@ -193,7 +193,7 @@ export const PortfolioExampleSectionOrganism = (
               </div>
               <div
                 onClick={openModal}
-                className="flex w-full lg:w-[95%] cursor-pointer"
+                className="flex w-full lg:w-[90%] cursor-pointer"
               >
                 <YouTubeVideoMolecule
                   embedURL={video_1_url}
@@ -204,9 +204,9 @@ export const PortfolioExampleSectionOrganism = (
             </div>
           </Parallax>
           {multipleVideos && (
-            <div className="w-full border-b-2 border-[#221C07] pb-10 lg:pb-16 mb-8 lg:mb-12">
+            <div className="w-full  border-b-2 justify-start flex border-[#221C07] pb-10 lg:pb-16 mb-6 lg:mb-12">
               <Parallax
-                className=" flex w-full lg:w-10/12  "
+                className=" flex w-full  "
                 easing={"easeOut"}
                 opacity={[0.7, 1]}
               >
@@ -219,14 +219,14 @@ export const PortfolioExampleSectionOrganism = (
                         </div>
                         <div
                           onClick={openModal2}
-                          className="flex w-full lg:w-8/12 cursor-pointer "
+                          className="flex w-full lg:w-9/12 cursor-pointer "
                         >
                           {isMobile ? (
                             <YouTubeVideoMolecule
                               embedURL={
                                 video_2_url !== undefined ? video_2_url : ""
                               }
-                              embedWidth={reducedWidth / 2.15}
+                              embedWidth={reducedWidth / 2.05}
                               embedHeight={reducedHeight * 1.65}
                             />
                           ) : isTablet ? (
@@ -242,7 +242,7 @@ export const PortfolioExampleSectionOrganism = (
                               embedURL={
                                 video_2_url !== undefined ? video_2_url : ""
                               }
-                              embedWidth={reducedWidth / 2.45}
+                              embedWidth={reducedWidth / 3.95}
                               embedHeight={reducedHeight * 1.125}
                             />
                           )}
@@ -253,7 +253,7 @@ export const PortfolioExampleSectionOrganism = (
                   <>
                     {video_3_url !== undefined && video_3 && (
                       <div className="flex w-full flex-col  ">
-                        <div className="text-[0.95em]   lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
+                        <div className="text-[0.95em] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
                           {video_3_title}
                         </div>
                         <div
@@ -281,7 +281,7 @@ export const PortfolioExampleSectionOrganism = (
                               embedURL={
                                 video_3_url !== undefined ? video_3_url : ""
                               }
-                              embedWidth={reducedWidth / 2.45}
+                              embedWidth={reducedWidth / 3.95}
                               embedHeight={reducedHeight * 1.125}
                             />
                           )}

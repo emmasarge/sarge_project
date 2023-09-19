@@ -36,7 +36,7 @@ export const AboutOrganism = () => {
             >
               <div
                 id="about-arrow"
-                className="flex pt-6 pb-14 w-full  justify-start items-start"
+                className="flex pt-8 pb-20 w-full  justify-start items-start"
               >
                 <DownArrowIcon
                   parent_container_id={"about-arrow"}
