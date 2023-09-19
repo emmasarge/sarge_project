@@ -66,11 +66,10 @@ export const LandingOrgansim: FunctionComponent = () => {
 
         <div className="flex flex-col fixed -mt-12 h-max object-cover w-1/2 z-[-9999]  justify-center  items-center ">
           {isMobile && (
-            <ScrollLink to="scroll-section" smooth={true} duration={300}>
+            <ScrollLink to="scroll-section" smooth={true} >
               <div className=" scroll-section  w-10/12 h-[100%] flex justify-between items-stretch flex-shrink flex-row">
                 <Parallax
-                  startScroll={2}
-                  scaleZ={[1.2, 1]}
+               
                   translateX={[210, 20]}
                   translateY={[10, -50]}
                   className="flex w-auto"
@@ -79,8 +78,6 @@ export const LandingOrgansim: FunctionComponent = () => {
                 </Parallax>
 
                 <Parallax
-                  startScroll={1}
-                  scaleZ={[1, 1.5]}
                   translateX={["7%", "50%"]}
                   translateY={["220%", "120%"]}
                   className="flex w-auto -z-50"
@@ -91,10 +88,9 @@ export const LandingOrgansim: FunctionComponent = () => {
             </ScrollLink>
           )}
           {isTablet && (
-            <ScrollLink to="scroll-section" smooth={true} duration={300}>
+            <ScrollLink to="scroll-section" smooth={true} >
               <div className=" scroll-section  w-10/12 h-[80%] flex justify-between items-stretch flex-shrink flex-row mt-[1.25em]">
                 <Parallax
-                  scaleZ={[1.2, 1]}
                   translateX={["310%", "30%"]}
                   translateY={["-90%", "10%"]}
                   className="flex w-auto"
@@ -103,7 +99,6 @@ export const LandingOrgansim: FunctionComponent = () => {
                 </Parallax>
 
                 <Parallax
-                  scaleZ={[1, 1.5]}
                   translateX={[-30, 60]}
                   translateY={[120, 200]}
                   className="flex w-auto -z-50"
@@ -118,12 +113,9 @@ export const LandingOrgansim: FunctionComponent = () => {
               to="scroll-section"
               className="ml-[30%] mt-[10%]"
               smooth={true}
-              duration={300}
             >
               <div className=" scroll-section  w-10/12 max-w-[400px] h-[60vh] flex justify-between items-stretch flex-shrink flex-row">
                 <Parallax
-                  startScroll={2}
-                  scaleZ={[1.2, 1]}
                   translateX={[200, 80]}
                   translateY={[-30, -20]}
                   className="flex w-auto"
@@ -132,8 +124,6 @@ export const LandingOrgansim: FunctionComponent = () => {
                 </Parallax>
 
                 <Parallax
-                  startScroll={9}
-                  scaleZ={[1, 1.5]}
                   translateX={[-90, 120]}
                   translateY={[40, -40]}
                   className="flex w-auto -z-50"
