@@ -10,7 +10,7 @@ export const LandingOrgansim: FunctionComponent = () => {
   const { isMobile, isTablet } = useDeviceDetect();
 
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 50) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -81,8 +81,8 @@ export const LandingOrgansim: FunctionComponent = () => {
                 <Parallax
                   startScroll={1}
                   scaleZ={[1, 1.5]}
-                  translateX={['7%', '50%']}
-                  translateY={['220%', "120%"]}
+                  translateX={["7%", "50%"]}
+                  translateY={["220%", "120%"]}
                   className="flex w-auto -z-50"
                 >
                   <div className="w-[85vw] h-[85vw] sm:w-[20em] sm:h-[20em] lg:mt-20 relative mt-[-12%] lg:static lg:w-[30vw] lg:h-[30vw] box rounded-full color-background-1 bg-blend-difference opacity-90   "></div>
@@ -94,17 +94,15 @@ export const LandingOrgansim: FunctionComponent = () => {
             <ScrollLink to="scroll-section" smooth={true} duration={300}>
               <div className=" scroll-section  w-10/12 h-[80%] flex justify-between items-stretch flex-shrink flex-row mt-[1.25em]">
                 <Parallax
-                  startScroll={2}
                   scaleZ={[1.2, 1]}
-                  translateX={['310%', '30%']}
-                  translateY={['-90%', '10%']}
+                  translateX={["310%", "30%"]}
+                  translateY={["-90%", "10%"]}
                   className="flex w-auto"
                 >
                   <div className="w-[95vw] h-[95vw] sm:w-[95vw] sm:h-[95vw]  lg:-mt-32 relative -mt-[20%] sm:-mt-[30%] lg:static lg:w-[30vw] lg:h-[30vw] box-2 rounded-full color-background-2  bg-blend-hard-light"></div>
                 </Parallax>
 
                 <Parallax
-                  startScroll={1}
                   scaleZ={[1, 1.5]}
                   translateX={[-30, 60]}
                   translateY={[120, 200]}
@@ -116,7 +114,12 @@ export const LandingOrgansim: FunctionComponent = () => {
             </ScrollLink>
           )}
           {!isMobile && !isTablet && (
-            <ScrollLink to="scroll-section" className="ml-[30%] mt-[10%]" smooth={true} duration={300}>
+            <ScrollLink
+              to="scroll-section"
+              className="ml-[30%] mt-[10%]"
+              smooth={true}
+              duration={300}
+            >
               <div className=" scroll-section  w-10/12 max-w-[400px] h-[60vh] flex justify-between items-stretch flex-shrink flex-row">
                 <Parallax
                   startScroll={2}
