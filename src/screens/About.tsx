@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import { AboutOrganism } from "../components/organsims/about-page/AboutOrganism";
+import { AboutSiteOrganism } from "../components/organsims/about-page/AboutSiteOrganism";
 export const About = () => {
-
   return (
     <>
       <Helmet>
@@ -13,6 +13,9 @@ export const About = () => {
       </Helmet>
       <div className="min-h-screen flex w-full flex-col max-w-[1900px] justify-center mb-20 h-max">
         <AboutOrganism />
+        <div className="w-full flex justify-center items-center">
+          <AboutSiteOrganism />
+        </div>
       </div>
     </>
   );

@@ -53,5 +53,10 @@
     "@types/react-helmet": "^6.1.6",
     "@types/react-scroll": "^1.8.7",
     "prettier": "3.0.3"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
