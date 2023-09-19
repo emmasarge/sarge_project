@@ -102,7 +102,7 @@ export const PortfolioExampleSectionOrganism = (
     useEffect(() => {
       const currentUrl = window.location.href;
     
-      if (currentUrl === 'http://localhost:3000/portfolio#skills-section' || currentUrl === 'https://main--ephemeral-dusk-b67505.netlify.app/portfolio#skills-section') {
+      if (currentUrl === 'http://localhost:3000/portfolio#skills-section' || currentUrl === 'https://emmasarge-developer.netlify.app/portfolio#skills-section') {
         const skillsSection = document.getElementById("skills-section");
         if (skillsSection) {
           skillsSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
