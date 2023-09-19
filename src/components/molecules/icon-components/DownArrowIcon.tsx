@@ -31,7 +31,7 @@ export const DownArrowIcon = (props: Props) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [props.parent_container_id]);
 
   return (
     <svg
