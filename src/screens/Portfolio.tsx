@@ -21,7 +21,7 @@ export const Portfolio = () => {
     return (
       <div className="h-[100vh] min-h-screen bg-[#fafafa] justify-center  flex  w-full items-center">
         <div>
-          <div className="flex flex-col w-full py-20 lg:w-11/12 mx-auto">
+          <div className="flex flex-col w-full py-20  mx-auto">
             <PortfolioHeroOrgansim />
           </div>
           <div className="fixed flex mx-auto w-fit mb-20">
