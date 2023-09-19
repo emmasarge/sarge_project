@@ -176,7 +176,7 @@ export const PortfolioExampleSectionOrganism = (
 
         <div
           id={`${props.companyName}-video-section`}
-          className="flex w-full flex-col  mt-10 md:mt-10 lg:mt-12 lg:mb-4  items-start justify-between"
+          className="flex w-full flex-col  mt-10 md:mt-12 lg:mt-16 lg:mb-4  items-start justify-between"
         >
           <Parallax
             className={
@@ -197,7 +197,7 @@ export const PortfolioExampleSectionOrganism = (
               >
                 <YouTubeVideoMolecule
                   embedURL={video_1_url}
-                  embedWidth={reducedWidth * 1.05}
+                  embedWidth={reducedWidth * 0.97}
                   embedHeight={reducedHeight * 0.9}
                 />
               </div>
@@ -210,11 +210,11 @@ export const PortfolioExampleSectionOrganism = (
                 easing={"easeOut"}
                 opacity={[0.7, 1]}
               >
-                <div className="flex flex-row  md:w-full  items-start justify-center mt-4 lg:mt-8">
+                <div className="flex flex-row  md:w-full  items-start justify-center mt-6 lg:mt-16">
                   <>
                     {video_2_url !== undefined && video_2_title && (
                       <div className="flex w-full flex-col mr-3 md:-mr-3 lg:mr-[2.75em]">
-                        <div className="text-[0.95em]  lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
+                        <div className="text-[0.95em] min-h-[2.5em] md:min-h-[1.125em] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
                           {video_2_title}
                         </div>
                         <div
@@ -253,7 +253,7 @@ export const PortfolioExampleSectionOrganism = (
                   <>
                     {video_3_url !== undefined && video_3 && (
                       <div className="flex w-full flex-col  ">
-                        <div className="text-[0.95em] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
+                        <div className="text-[0.95em] min-h-[2.5em]  md:min-h-[1.125em] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
                           {video_3_title}
                         </div>
                         <div
