@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { YouTubeVideoMolecule } from "../../molecules/youtube-video/YouTubeVideoMolecule";
 import { Parallax } from "react-scroll-parallax";
 import useIsMobile from "../../../hooks/IsMobile";
+import { ModalMolecule } from "../../molecules/modal/ModalMolecule";
+
 
 interface VideoProps {
   video_1: {
@@ -41,6 +43,15 @@ export const PortfolioExampleSectionOrganism = (
   const [reducedHeight, setReducedHeight] = useState<number>(
     window.innerWidth / 2.05
   );
+  const [isModalOpen, setModalOpen] = useState<boolean>(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -86,7 +97,7 @@ export const PortfolioExampleSectionOrganism = (
             className="w-full flex-col "
           >
             <a href={props.companyURL} target="_blank" rel="noreferrer">
-              <h1 className="text-[1.5em] cursor-pointer hover:underline hover:underline-offset-4 transition-all ease  hover:tracking-widest duration-300 hover:duration-300  lg:text-[2em] tracking-wide leading-[1.125em] text-dark">
+              <h1 className="text-[1.5em] cursor-pointer  hover:uppercase transition-all ease  hover:tracking-widest duration-300 hover:duration-300  lg:text-[2em] tracking-wide leading-[1.125em] text-dark">
                 {props.companyName}
               </h1>
             </a>
@@ -110,7 +121,9 @@ export const PortfolioExampleSectionOrganism = (
         >
           <Parallax
             className={
-              multipleVideos ? "mb-0" : "border-b-2 border-[#221C07] pb-12 lg:pb-20 "
+              multipleVideos
+                ? "mb-0"
+                : "border-b-2 border-[#221C07] pb-12 lg:pb-20 "
             }
             easing={"easeOut"}
             speed={6}
@@ -120,7 +133,7 @@ export const PortfolioExampleSectionOrganism = (
               <div className="text-[0.85em] w-[95%] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
                 {video_1_title}
               </div>
-              <div className="flex w-full lg:w-11/12">
+              <div onClick={openModal} className="flex w-full lg:w-11/12">
                 <YouTubeVideoMolecule
                   embedURL={video_1_url}
                   embedWidth={reducedWidth * 1.05}
@@ -178,6 +191,26 @@ export const PortfolioExampleSectionOrganism = (
           )}
         </div>
       </div>
+      <ModalMolecule isOpen={isModalOpen} onClose={closeModal}>
+        <div className="flex w-[98%] justify-center items-center mx-auto lg:w-full">
+          {isMobile ? (
+           <div className="flex w-full player-wrapper ">
+           <YouTubeVideoMolecule
+                embedURL={video_1_url}
+                embedWidth={"90vw"}
+              />
+           </div>
+          ) : (
+            <>
+              <YouTubeVideoMolecule
+                embedURL={video_1_url}
+                embedWidth={"80vw"}
+                embedHeight={"70vh"}
+              />
+            </>
+          )}
+        </div>
+      </ModalMolecule>
     </div>
   );
 };

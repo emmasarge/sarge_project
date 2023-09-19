@@ -28,11 +28,11 @@ export const NavbarOrganism = () => {
         <div className="flex w-auto">
           <div onClick={handleMenu} className="flex w-7 sm:w-8 z-50 ">
             {menuOpen ? (
-              <div className=" md:ml-5 flex w-11/12 ">
+              <div className=" md:ml-5 flex w-full ">
                 <CloseIcon className="close_button" />
               </div>
             ) : (
-              <div className="w-full flex z-50" >
+              <div className="w-full flex z-50 cursor-pointer" >
                 <BurgerMenu />
               </div>
             )}
@@ -41,30 +41,37 @@ export const NavbarOrganism = () => {
         {menuOpen && (
           <div
             id="menu"
-            className={` w-1/3 relative md:right-10 md: -ml-2 h-[100vh] navbar-menu ${
+            className={`w-1/3 relative md:right-10 md: -ml-2 h-[100vh] navbar-menu ${
               menuOpen ? "nav_active" : "nav_closing"
             }`}
           >
             <div
               onClick={closeMenu}
-              className="h-[40vh] absolute w-8/12 pl-5  pt-8 flex-col flex justify-start items-start"
+              className="h-[40vh] absolute w-8/12 pl-5 lg:pl-8 lg:text-[1.25em]  pt-8 flex-col flex justify-start items-start"
             >
               <Link
-                className="text-dark  mt-8 font-light text-[1.125em]  uppercase tracking-wide hover:italic transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
+                className="text-dark  mt-8 font-light text-[1.125em] hover:bg-[#F1B417] hover:px-2 uppercase tracking-wide hover:italic transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
                 to="/"
                 aria-label="home"
               >
                 Home
               </Link>
               <Link
-                className="text-dark font-light mt-5 text-[1.125em]   uppercase tracking-wide hover:italic transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
+                className="text-dark font-light mt-5 text-[1.125em] hover:bg-[#F1B417] hover:px-2  uppercase tracking-wide hover:italic transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
                 to="/portfolio"
                 aria-label="portfolio"
               >
-                Porfolio
+                Portfolio
               </Link>
               <Link
-                className="text-dark font-light mt-5 text-[1.125em]   uppercase tracking-wide hover:italic transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
+                className="text-dark font-light mt-5 text-[1.125em] hover:bg-[#F1B417] hover:px-2  uppercase tracking-wide hover:italic transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
+                to="/about"
+                aria-label="about"
+              >
+                About
+              </Link>
+              <Link
+                className="text-dark font-light mt-5 text-[1.125em] hover:bg-[#F1B417] hover:px-2  uppercase tracking-wide hover:italic transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
                 to="/contact"
                 aria-label="contact"
               >

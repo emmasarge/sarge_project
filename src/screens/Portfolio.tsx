@@ -3,6 +3,8 @@ import { PortfolioExampleSectionOrganism } from "../components/organsims/portfol
 import { PortfolioHeroOrgansim } from "../components/organsims/portfolio/PortfolioHero";
 import { useApiRequest } from "../hooks/API";
 
+import { ReactComponent as Spinner } from '../assets/icons/spinner.svg';
+
 export const Portfolio = () => {
   const url = "https://sarge-api-23-8cdf3807bdf0.herokuapp.com/jobs/";
   const { data, loading, error } = useApiRequest(url);
@@ -16,7 +18,7 @@ export const Portfolio = () => {
   ];
 
   if (loading) {
-    return <p className="mx-auto">Loading...</p>;
+    return <div className="h-[100vh] bg-[#fafafa] w-screen justify-center py-30 mt-72 items-center"><Spinner/></div> 
   }
 
   if (error) {

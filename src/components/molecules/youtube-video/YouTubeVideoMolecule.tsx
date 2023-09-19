@@ -1,26 +1,25 @@
 import React from "react";
-import ReactPlayer from 'react-player'
+import ReactPlayer from "react-player/youtube";
 
 interface YouTubeVideoMoleculeProps {
   embedURL: string;
-  embedWidth: number | string;
-  embedHeight: number | string;
+  embedWidth?: number | string;
+  embedHeight?: number | string;
 }
 
 export const YouTubeVideoMolecule = (props: YouTubeVideoMoleculeProps) => {
   return (
-    <div className="flex w-full">
+    <div className="flex w-full player-wrapper  ">
       <ReactPlayer
-        url={props.embedURL} // Correct the URL prop here
+        url={props.embedURL}
         loop={true}
         playing={true}
         muted={true}
-        fullscreen={true}
-        controls={true} 
-        style={{border: '5px solid #221C07'}}
-        height={props.embedHeight}
-        width={props.embedWidth}
-        
+        controls={true}
+        style={{ border: "5px solid #221C07" }}
+        height={props.embedHeight || "100%"}
+        width={props.embedWidth || "100%"}
+        className="react-player"
       />
     </div>
   );

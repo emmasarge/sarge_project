@@ -9,7 +9,7 @@ export const PortfolioHeroOrgansim = () => {
     >
       <div className="flex flex-col w-11/12 items-start justify-center">
         
-        <div className="max-w-[1000px] pt-[13%]">
+        <div className="max-w-[1000px] pt-[8%]">
         <Parallax easing={'easeOut'} translateY={[-8, 8]}>
           <h1 className="text-[1.5em] lg:text-[2.5em] text-dark tracking-wide leading-[1.2em]">Portfolio and skills.</h1>
           </Parallax>

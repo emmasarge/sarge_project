@@ -58,16 +58,20 @@ export const ContactFormMolecule: React.FC = () => {
             please get in touch with the form below.
           </h2>
         </div>
-        <Parallax easing={'easeOut'} translateY={[-3, 3]}>
-        <div id="hero-arrow" className="flex mt-10 w-10/12 lg:w-full ">
+        <Parallax easing={"easeOut"}
+            speed={6}
+            opacity={[0.7, 1]}>
+        <div id="hero-arrow" className="flex  mt-10 w-10/12 lg:w-full ">
           <DownArrowIcon parent_container_id={'hero-arrow'} height_size={66} width_size={18} />
         </div>
         </Parallax>
       </Parallax>
-      <Parallax className="w-full justify-start items-start flex flex-col pb-12" speed={2} translateY={[10, -10]} opacity={[1, 0.7]}>
+      <Parallax className="w-full justify-start items-start mt-4 flex flex-col pb-12" easing={"easeOut"}
+            speed={6}
+            opacity={[0.7, 1]}>
         <form
           id="contact-form"
-          className=" mt-[-0.75em] lg:mt-[1em] mb-20 text-[1.25em] lg:text-[1.5em] w-11/12 flex flex-col lg:flex-row mx-auto justify-start items-start"
+          className=" mt-[-0.75em] lg:mt-[1em] mb-20 text-[1.25em] lg:text-[1.125em] w-11/12 flex flex-col lg:flex-row mx-auto justify-start items-start"
         >
           <div className="flex-col w-full lg:w-1/3">
             <input
@@ -90,12 +94,12 @@ export const ContactFormMolecule: React.FC = () => {
             <textarea
               rows={7}
               name="message"
-              className=" resize-none placeholder:text-dark w-11/12 bg-[#fafafa] text-dark placeholder:font-light max-w-[800px] px-3 mb-0 py-1.5 border-2 border-[#221C07]"
+              className=" resize-none placeholder:text-dark w-11/12  bg-[#fafafa] text-dark placeholder:font-light max-w-[800px] px-3 mb-0 py-1.5 border-2 border-[#221C07]"
               placeholder="Type your message here."
               required
             />
             <input
-              className="mt-6 w-11/12 lg:max-w-[300px] lg:mt-5 border-2 text-dark border-[#2B2308] bg-[#fafafa]  hover:duration-300 hover:bg-[#221C07] hover:text-white  hover:tracking-widest  transition  duration-300 ease-in-out  cursor-pointer rounded-full py-1 px-[4em] tracking-wider shadow-sm"
+              className="mt-6 w-11/12 lg:max-w-[300px]  text-[1.125em] lg:text-[1.25em] lg:mt-5 border-2 text-dark border-[#2B2308] bg-[#fafafa]  hover:duration-300 hover:bg-[#221C07] hover:text-white  hover:tracking-widest  transition  duration-300 ease-in-out  cursor-pointer rounded-full py-1 px-[4em] tracking-wider shadow-sm"
               type="submit"
               value="Send"
             />

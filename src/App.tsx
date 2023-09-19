@@ -8,7 +8,7 @@ import { Layout } from "./screens/Layout";
 import { Home } from "./screens/Home";
 import { NoPage } from "./screens/NoPage";
 import { Portfolio } from "./screens/Portfolio";
-import { WorkExperienceDetail } from "./screens/WorkExperienceDetail";
+import { About } from "./screens/About";
 import { Contact } from "./screens/Contact";
 
 export default function App() {
@@ -25,7 +25,7 @@ export default function App() {
             <Route path="portfolio" element={<Portfolio />} />
             <Route path="contact" element={<Contact />} />
 
-            <Route path="portfolio/:id" element={<WorkExperienceDetail />} />
+            <Route path="about" element={<About />} />
 
             <Route path="*" element={<NoPage />} />
           </Route>
