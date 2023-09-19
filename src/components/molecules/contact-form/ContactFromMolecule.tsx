@@ -127,7 +127,7 @@ export const ContactFormMolecule: React.FC = () => {
               value="Send"
             />
             {message && (
-              <p className="mt-[1.25em] lg:mt-2 font-light text-[1em]">
+              <p className="mt-[1.25em] mx-auto lg:mt-2 font-light text-[1em]">
                 {message}
               </p>
             )}

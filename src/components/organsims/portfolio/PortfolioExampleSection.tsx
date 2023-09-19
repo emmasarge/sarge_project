@@ -98,13 +98,17 @@ export const PortfolioExampleSectionOrganism = (
     return url;
   };
 
-  useEffect(() => {
-    const skillsSection = document.getElementById("skills-section");
-    if (skillsSection) {
-      skillsSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
-  }, []);
 
+    useEffect(() => {
+      const currentUrl = window.location.href;
+    
+      if (currentUrl === 'http://localhost:3000/portfolio#skills-section' || currentUrl === 'https://main--ephemeral-dusk-b67505.netlify.app/portfolio#skills-section') {
+        const skillsSection = document.getElementById("skills-section");
+        if (skillsSection) {
+          skillsSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      }
+    }, []);
 
   useEffect(() => {
     if (isMobile) {

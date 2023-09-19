@@ -35,8 +35,8 @@ export const Portfolio = () => {
   if (error) {
     return (
       <div className="min-h-screen flex flec-col w-full justify-center items-center">
-        <div className="mb-20 w-10/12">
-          <p className="text-[1.5em] text-dark leading-[1.2em]">
+        <div className="mb-20 w-10/12 flex items-center justify-center">
+          <p className="text-[1.5em] mx-auto text-dark leading-[1.2em]">
             Error: {error}
           </p>
         </div>
