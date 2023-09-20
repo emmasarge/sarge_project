@@ -12,7 +12,7 @@ export const Home = () => {
           content="Emma Sargeant is a frontend developer based in London."
         />
       </Helmet>
-      <div className="flex h-full min-h-screen max-w-[1900px] justify-center mt-10 flex-col items-center w-full ">
+      <div className="flex h-full  mx-auto  min-h-screen max-w-[1900px] justify-center mt-10 flex-col items-center w-full ">
         <LandingOrgansim />
       </div>
     </>

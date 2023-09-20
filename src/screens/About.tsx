@@ -11,7 +11,7 @@ export const About = () => {
           content="Emma Sargeant is a frontend web developer with backend, SEO, UX and digital marketing knowledge based in London."
         />
       </Helmet>
-      <div className="min-h-screen flex w-full flex-col max-w-[1900px] justify-center mb-20 h-max">
+      <div className="min-h-screen flex w-full flex-col mx-auto max-w-[1900px] justify-center items-center mb-20 h-max">
         <AboutOrganism />
         <div className="w-full flex justify-center items-center">
           <AboutSiteOrganism />

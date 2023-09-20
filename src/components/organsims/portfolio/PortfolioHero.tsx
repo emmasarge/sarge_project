@@ -5,11 +5,11 @@ export const PortfolioHeroOrgansim = () => {
   return (
     <div
       id="portfolio-hero"
-      className=" flex w-full justify-center xs:pt-[3em] md:pt-[4em] 2xl:pt-[12em] 2xl:mb-[2em] min-h-[40vh]  md:min-h-[40vh] lg:min-h-[50vh]"
+      className=" flex w-full justify-center  md:pt-[4em] 2xl:pt-[12em] 2xl:mb-[2em] min-h-[40vh]  md:min-h-[40vh] lg:min-h-[50vh]"
     >
-      <div className="flex text-[1.125em] md:text-[1.125em] lg:text-[1em] flex-col w-11/12 items-start justify-center">
+      <div className="flex text-[1.125em] md:text-[1.125em] lg:text-[1em] mb-2 flex-col w-11/12 items-start justify-center">
         
-        <div className="max-w-[1600px] pt-[16%] md:pt-[8%]">
+        <div className="max-w-[1600px] xs:pt-[16%] md:pt-[8%] xl:pt-0">
         <Parallax easing={'easeOut'} translateY={[-8, 8]}>
           <h1 className="text-[1.5em] lg:text-[2.5em] text-dark tracking-wide leading-[1.2em]">Portfolio and skills.</h1>
           </Parallax>
@@ -26,8 +26,8 @@ export const PortfolioHeroOrgansim = () => {
         </div>
       
       
-        <Parallax className="pb-3" easing={'easeOut'} translateY={[-8, 8]}>
-        <div id="hero-arrow" className="flex mb-10 lg:mb-2 mt-14 md:mt-12 lg:mt-20 w-full ">
+        <Parallax className="mb-1 h-fit" easing={'easeOut'} translateY={[-8, 8]}>
+        <div id="hero-arrow" className="flex mbb-2  pb-2 w-11/12 lg:mb-2 mt-14 md:mt-12 lg:mt-20  ">
           <DownArrowIcon parent_container_id={'hero-arrow'} height_size={66} width_size={18} />
         </div>
         </Parallax>

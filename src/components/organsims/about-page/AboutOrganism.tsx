@@ -21,7 +21,7 @@ export const AboutOrganism = () => {
             <h1 className="text-[1.5em] lg:mt-8 lg:text-[2em] text-dark tracking-wide leading-[1.2em]">
               About.
             </h1>
-            <h1 className="text-[1.35em] mt-[0.5em] lg:text-[1.75em] text-dark tracking-wide leading-[1.125em] flex flex-wrap">
+            <h1 className="text-[1.35em] mt-[0.5em] lg:text-[1.75em] text-dark sm:w-11/12 tracking-wide leading-[1.125em] flex flex-wrap">
               Emma Sargeant is a frontend web and app developer based in London,
               with full-stack knowledge and a background in digital marketing,
               SEO, and UX/UI design.
@@ -30,7 +30,7 @@ export const AboutOrganism = () => {
 
           {isMobile ? (
             <Parallax
-              className="pb-2.5 flex"
+              className="pb-2.5 mb-10 flex"
               easing={"easeOut"}
               translateY={[8, 10]}
             >
@@ -85,7 +85,7 @@ export const AboutOrganism = () => {
         <div className="flex flex-col w-full lg:w-1/2 justify-center lg:justify-end items-center lg:items-end">
           {isMobile ? (
             <Parallax
-              className="flex w-full pt-[16%]  justify-start lg:justify-end"
+              className="flex w-full pt-[16%] pb-1.5 justify-start lg:justify-end"
               easing={"easeInOut"}
               translateY={[10, -10]}
             >
@@ -95,23 +95,23 @@ export const AboutOrganism = () => {
             </Parallax>
           ) : isTablet ? (
             <Parallax
-              className="flex w-full pt-[10%]  items-strt justify-start lg:justify-end"
+              className="flex w-full pt-[1em]  items-start justify-start lg:justify-end"
               easing={"easeInOut"}
-              translateY={[10, -10]}
+              translateY={[8, -8]}
             >
-              <div className="flex justify-start  items-start w-7/12 pt-12 pb-6 lg:w-9/12 xl:w-10/12 pr-[2em] lg:-mt-8 ">
+              <div className="flex justify-start  items-start w-7/12 pt-[2em] pb-6 lg:w-9/12 xl:w-10/12 pr-[2em] lg:-mt-8 ">
                 <img src={EmmaImg} alt="Emma Sargeant" className="shadow-md" />
               </div>
             </Parallax>
           ) : (
             <Parallax
-              className="flex w-full  justify-start lg:justify-end"
+              className="flex w-full pb-5  justify-start lg:justify-end lg:-mr-10 "
               easing={"easeInOut"}
               scale={[0.95, 1]}
               translateY={[-10, 10]}
               opacity={[1, 0.8]}
             >
-              <div className="flex w-10/12 lg:w-full xl:w-11/12 lg:-mr-8 xl:mr-0 xl:pl-[2em] lg:mt-2 ">
+              <div className="flex w-10/12 lg:w-full xl:w-11/12 2xl:w-full lg:-mr-10 xl:mr-0 xl:pl-[2em] lg:mt-2 ">
                 <img loading="lazy" src={EmmaImg} alt="Emma Sargeant" className="shadow-md" />
               </div>
             </Parallax>
@@ -121,9 +121,9 @@ export const AboutOrganism = () => {
 
       <div className="flex text-[1em] md:text-[1.125em] lg:text-[0.925em] flex-col lg:flex-row w-11/12 lg:w-10/12 h-max justify-between items-start lg:mt-3 mb-40">
         <Parallax
-          className=" flex mt-[18%] md:mt-[5%] w-[95%] lg:w-10/12 flex-col  items-start  justify-start lg:pr-10"
+          className=" flex mt-[2%] md:mt-[5%] w-[95%] lg:w-10/12 flex-col  items-start  justify-start lg:pr-10"
           easing={"easeInOut"}
-          translateY={[-10, 10]}
+          translateY={[-8, 8]}
           opacity={[1, 0.8]}
         >
           <div className="w-full">
@@ -172,7 +172,7 @@ export const AboutOrganism = () => {
         </Parallax>
 
 
-        <div className="mt-[60%] md:mt-[30%] flex flex-col w-full lg:w-[35%] lg:bg-mustard lg:px-5 lg:pb-6 lg:sticky lg:justify-end lg:items-end  lg:top-28 pt-12 lg:pt-2 lg:shadow-md lg:rounded-[3px] border-t-2 lg:-mr-10 lg:border-0 border-dark lg:-mt-5">
+        <div className="mt-[12em] sm:mt-[12em] md:mt-[9em] lg:mt-6 flex flex-col w-full lg:w-[35%] lg:bg-mustard lg:px-5 lg:pb-6 lg:sticky lg:justify-end lg:items-end  lg:top-28 pt-12 lg:pt-2 lg:shadow-md lg:rounded-[3px] border-t-2 lg:-mr-10 lg:border-0 border-dark ">
           <div className="text-[1em] md:text-[1.125em] lg:text-[0.85em] lg:pl-2 lg:mx-auto">
             <p className="text-[1.35em] mt-[0.5em] lg:text-[1.65em] text-dark tracking-wide leading-[1.125em]">
               Emma is available for freelance projects.

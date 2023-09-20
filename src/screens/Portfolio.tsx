@@ -19,7 +19,7 @@ export const Portfolio = () => {
 
   if (loading) {
     return (
-      <div className="h-[100vh] min-h-screen bg-[#fafafa] justify-center  flex  w-full items-center">
+      <div className="h-[100vh] min-h-screen max-w-[1900px] mx-auto bg-[#fafafa] justify-center  flex  w-full items-center">
         <div className="w-full flex flex-col justify-center">
           <div className="flex flex-col w-full py-20  mx-auto">
             <PortfolioHeroOrgansim />
@@ -68,7 +68,7 @@ export const Portfolio = () => {
           content="Emma Sargeant is an experienced frontend developer. She builds web and mobile iOS and Android apps using React, React Native, Python, MongoDB, Shopify and more.  "
         />
       </Helmet>
-      <div className="w-full flex flex-col justify-center items-center min-h-screen py-20  overflow-y-scroll">
+      <div className="w-full max-w-[1900px] mx-auto flex flex-col justify-center items-center min-h-screen py-20  overflow-y-scroll">
         <div className="flex flex-col w-full  lg:w-11/12 mx-auto">
           <PortfolioHeroOrgansim />
           <div className="w-full justify-center lg:pt-10 pb-0">

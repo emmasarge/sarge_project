@@ -2,7 +2,7 @@ import { Parallax } from "react-scroll-parallax";
 
 export const AboutSiteOrganism = () => {
   return (
-    <div className="w-11/12 lg:w-10/12 flex flex-col text-[0.85em] lg:text-[0.7em] mt-16 lg:mt-32">
+    <div className="w-11/12 lg:w-10/12 flex flex-col text-[0.85em] lg:text-[0.7em] mt-16 lg:mt-20">
       <Parallax
         className="pb-2"
         easing={"easeOut"}

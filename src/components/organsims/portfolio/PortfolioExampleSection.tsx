@@ -112,7 +112,7 @@ export const PortfolioExampleSectionOrganism = (
 
   useEffect(() => {
     if (isMobile) {
-      const reducedWindowWidth = intitialWindowWidth * 0.88;
+      const reducedWindowWidth = intitialWindowWidth * 0.95;
       setReducedWidth(reducedWindowWidth);
 
       const windowHeight = intitialWindowHeight * 1.15;
@@ -141,7 +141,7 @@ export const PortfolioExampleSectionOrganism = (
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="w-11/12 text-[1em] md:text-[1.125em] lg:text-[1em] flex flex-col items-start  ">
-        <Parallax easing={"easeOut"}  opacity={[0.7, 1]}>
+        <Parallax easing={"easeOut"}  className="mt-3" opacity={[0.7, 1]}>
           <div
             id={`${props.companyName}-description-section`}
             className="w-full flex-col "
@@ -155,7 +155,7 @@ export const PortfolioExampleSectionOrganism = (
               <h1 className="text-[1.65em]  cursor-pointer  transition-all ease  duration-300 hover:duration-300  lg:text-[2em] tracking-wide leading-[1.125em] text-dark">
                 {props.companyName}
               </h1>
-              <p className=" w-fit text-[0.9em]  hover:bg-mustard hover:px-2  lg:text-[0.95em] hover:tracking-widest  hover:italic font-normal leading-[1.2em] mt-1 text-dark tracking-wider uppercase mb-6 md:mb-7 lg:mb-8">
+              <p className=" w-fit text-[0.9em]  hover:bg-mustard hover:px-2  lg:text-[1.125em] hover:tracking-widest  hover:italic font-normal leading-[1.2em] mt-1 text-dark tracking-wider uppercase mb-6 md:mb-7 lg:mb-8">
                 {removeHttps(props.companyURL)}
               </p>
             </a>
@@ -187,8 +187,8 @@ export const PortfolioExampleSectionOrganism = (
             easing={"easeOut"}
             opacity={[0.7, 1]}
           >
-            <div className="flex flex-col w-full lg:w-11/12 pb-3">
-              <div className="text-[0.95em] w-full lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
+            <div className="flex flex-col w-full lg:w-11/12 pb-[2em]  mt-[0.75em] xl:mt-[2em]">
+              <div className="text-[0.95em] w-full lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5  leading-[1.2em] text-dark">
                 {video_1_title}
               </div>
               <div
@@ -204,7 +204,7 @@ export const PortfolioExampleSectionOrganism = (
             </div>
           </Parallax>
           {multipleVideos && (
-            <div className="w-full  border-b-2 justify-start flex border-[#221C07] pb-10 lg:pb-16 mb-6 lg:mb-12">
+            <div className="w-full  border-b-2 justify-start flex border-[#221C07] pb-[4.5em] lg:pb-[6em] mb-6 lg:mb-12">
               <Parallax
                 className=" flex w-full  "
                 easing={"easeOut"}
@@ -213,20 +213,20 @@ export const PortfolioExampleSectionOrganism = (
                 <div className="flex flex-row  md:w-full  items-start justify-center mt-6 lg:mt-16">
                   <>
                     {video_2_url !== undefined && video_2_title && (
-                      <div className="flex w-full flex-col mr-3 md:-mr-3 lg:mr-[2.75em]">
-                        <div className="text-[0.95em] min-h-[2.5em] md:min-h-[1.125em] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
+                      <div className="flex w-full flex-col mr-3 md:-mr-3 lg:mr-[2em]">
+                        <div className="text-[0.95em] min-h-[2.5em] flex  items-end md:min-h-[1.125em] lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5 leading-[1.2em] text-dark">
                           {video_2_title}
                         </div>
                         <div
                           onClick={openModal2}
-                          className="flex w-full lg:w-9/12 cursor-pointer "
+                          className="flex w-full lg:w-9/12  cursor-pointer "
                         >
                           {isMobile ? (
                             <YouTubeVideoMolecule
                               embedURL={
                                 video_2_url !== undefined ? video_2_url : ""
                               }
-                              embedWidth={reducedWidth / 2.05}
+                              embedWidth={reducedWidth / 2.35}
                               embedHeight={reducedHeight * 1.65}
                             />
                           ) : isTablet ? (
@@ -253,7 +253,7 @@ export const PortfolioExampleSectionOrganism = (
                   <>
                     {video_3_url !== undefined && video_3 && (
                       <div className="flex w-full flex-col  ">
-                        <div className="text-[0.95em] min-h-[2.5em]  md:min-h-[1.125em] lg:text-[0.95em] uppercase font-medium tracking-[0.065em] mb-2.5 lg:mb-3  leading-[1.2em] text-dark">
+                        <div className="text-[0.95em] min-h-[2.5em] flex  items-end  md:min-h-[1.125em] lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5  leading-[1.2em] text-dark">
                           {video_3_title}
                         </div>
                         <div
@@ -265,7 +265,7 @@ export const PortfolioExampleSectionOrganism = (
                               embedURL={
                                 video_3_url !== undefined ? video_3_url : ""
                               }
-                              embedWidth={reducedWidth / 2.15}
+                              embedWidth={reducedWidth / 2.35}
                               embedHeight={reducedHeight * 1.65}
                             />
                           ) : isTablet ? (

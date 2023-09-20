@@ -53,7 +53,7 @@ export const ContactFormMolecule: React.FC = () => {
         easing={"easeOut"}
 
       >
-        <div className="w-[95%] lg:w-10/12 mt-[20%]">
+        <div className="w-[95%] lg:w-10/12 mt-[16%] lg:mt-[20%]">
           <h1 className=" text-[1.75em] lg:text-[2.25em] tracking-wide">
             Contact.
           </h1>
@@ -84,7 +84,7 @@ export const ContactFormMolecule: React.FC = () => {
         </Parallax>
       </Parallax>
       <Parallax
-        className="pt-4 w-full justify-start items-start -mt-32 lg:-mt-24 flex flex-col pb-12"
+        className="pt-4 w-full justify-start items-start -mt-28 lg:-mt-24 flex flex-col pb-12"
         easing={"easeOut"}
         opacity={[1, 0.7]}
         translateY={[-3, 4]}
