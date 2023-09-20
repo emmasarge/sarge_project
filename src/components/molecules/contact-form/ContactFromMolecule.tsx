@@ -11,6 +11,10 @@ export const ContactFormMolecule: React.FC = () => {
   const [message, setMessage] = useState<string | null>(null);
   const [email, setEmail] = useState<string>("");
   const [emailValid, setEmailValid] = useState<boolean | null>(null);
+  const [name, setName] = useState<string | undefined>(undefined);
+  const [nameValid, setNameValid] = useState<boolean | null>(null);
+  const [messageValid, setMessageValid] = useState<boolean | null>(null);
+  const [formMessage, setFormMessage] = useState<string | null>(null);
 
   emailjs.init(EMAILJS_USER_ID);
 
@@ -20,9 +24,27 @@ export const ContactFormMolecule: React.FC = () => {
     setEmailValid(emailRegex.test(email));
   }, [email]);
 
+  useEffect(() => {
+    if (name !== undefined) {
+      setNameValid(true);
+    } else {
+      setNameValid(false);
+    }
+    if (formMessage !== null) {
+      setMessageValid(true);
+    } else {
+      setMessageValid(false);
+    }
+  }, [name, formMessage]);
 
   const handleEmailChange = (event: any) => {
     setEmail(event.target.value);
+  };
+  const handleNameChange = (event: any) => {
+    setName(event.target.value);
+  };
+  const handleFormMessageChange = (event: any) => {
+    setFormMessage(event.target.value);
   };
 
   const handleSubmit = useCallback((event: any) => {
@@ -108,6 +130,7 @@ export const ContactFormMolecule: React.FC = () => {
               placeholder="Name"
               className=" bg-[#FAFAFA] placeholder:text-dark placeholder:font-light mb-4  text-dark blur-none focus-visible:bg-[#FAFAFA] resize-none w-full lg:w-11/12 max-w-[800px] px-3 py-1.5 border-[1.5px] border-[#221C07]"
               required
+              onChange={handleNameChange}
             />
 
             <input
@@ -133,11 +156,17 @@ export const ContactFormMolecule: React.FC = () => {
               className=" resize-none placeholder:text-dark w-full  lg:w-11/12  bg-[#fafafa] text-dark placeholder:font-light max-w-[800px] px-3 mb-0 py-1.5 border-[1.5px] border-[#221C07]"
               placeholder="Type your message here."
               required
+              onChange={handleFormMessageChange}
             />
             <input
-              className="mt-6  w-full lg:w-11/12 lg:max-w-[300px]  text-[1.125em] lg:text-[1.25em] lg:mt-8 border-[1.5px] text-dark border-[#2B2308] bg-[#fafafa]  hover:duration-300 hover:bg-[#221C07] hover:text-white  hover:tracking-widest  transition  duration-300 ease-in-out  cursor-pointer rounded-full py-1 px-[4em] tracking-wider shadow-sm"
+              className="mt-6 disabled:opacity-50 w-full lg:w-11/12 lg:max-w-[300px]  text-[1.125em] lg:text-[1.25em] lg:mt-8 border-[1.5px] text-dark border-[#2B2308] bg-[#fafafa]  hover:duration-300 hover:bg-[#221C07] hover:text-white  hover:tracking-widest  transition  duration-300 ease-in-out  cursor-pointer rounded-full py-1 px-[4em] tracking-wider shadow-sm"
               type="submit"
               value="Send"
+              disabled={
+                emailValid === false ||
+                nameValid === false ||
+                messageValid === false
+              }
             />
             {message && (
               <p className="mt-[1.25em] mx-auto lg:mx-0 lg:mt-8   text-[1em]">
