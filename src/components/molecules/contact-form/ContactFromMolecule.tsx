@@ -105,7 +105,7 @@ export const ContactFormMolecule: React.FC = () => {
 
             <input
               type="email"
-              name="from_email"
+              name="reply_to"
               placeholder="Email"
               className=" resize-none placeholder:text-dark placeholder:font-light  text-dark bg-[#FAFAFA] w-full lg:w-11/12 mb-4 max-w-[800px] px-3 py-1.5 border-[1.5px] border-[#221C07]"
               required
