@@ -41,7 +41,7 @@ export const NavbarOrganism = () => {
         {menuOpen && (
           <div
             id="menu"
-            className={`w-1/3 relative border-l-[5px] border-dark md:right-10 md: -ml-2 h-[100vh] navbar-menu ${
+            className={`w-1/3 relative border-l-[5px] border-dark md:right-10 md: -ml-2 h-screen navbar-menu ${
               menuOpen ? "nav_active" : "nav_closing"
             }`}
           >

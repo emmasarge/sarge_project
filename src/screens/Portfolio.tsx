@@ -20,11 +20,11 @@ export const Portfolio = () => {
   if (loading) {
     return (
       <div className="h-[100vh] min-h-screen bg-[#fafafa] justify-center  flex  w-full items-center">
-        <div>
+        <div className="w-full flex flex-col justify-center">
           <div className="flex flex-col w-full py-20  mx-auto">
             <PortfolioHeroOrgansim />
           </div>
-          <div className="fixed flex mx-auto w-fit mb-20">
+          <div className="mx-auto w-fit pt-4 mb-20">
             <Spinner />
           </div>
         </div>

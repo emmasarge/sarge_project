@@ -2,19 +2,21 @@ import React, { FunctionComponent, useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { Parallax } from "react-scroll-parallax";
 import useDeviceDetect from "../../../utils/DeviceDetect";
+import { ScrollAnimation } from "../../molecules/scroll-animation/ScrollAnimation";
 
 export const LandingOrgansim: FunctionComponent = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isMobile, isTablet } = useDeviceDetect();
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
+    requestAnimationFrame(() => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    });
   };
 
   useEffect(() => {
@@ -40,21 +42,22 @@ export const LandingOrgansim: FunctionComponent = () => {
             : "w-full flex flex-row  justify-between item-stretch  "
         }`}
       >
-        <div className="flex flex-col h-full mb-20 w-11/12 lg:pl-10 lg:w-[60%]  static py-30 z-10 justify-center items-center mt-[-26%] md:-mt-[18%]  lg:-mt-[8%]">
-          <div className=" flex flex-col  py-10 h-max text-dark w-11/12   pb-30 ">
+        <div className="flex flex-col h-full mb-20 w-11/12 lg:pl-10 lg:w-[60%] absolute py-30 justify-center items-center mt-[-18%] md:-mt-[18%]  lg:-mt-[8%]">
+          <div className=" flex flex-col  py-10 h-max text-dark w-11/12 justify-start items-start  pb-30  max-w-[800px]">
             <h1 className="text-[1.75em] md:text-[2.5em]  leading-[1.1em]  text-dark">
               Emma Sargeant
             </h1>
+
             <h2 className=" text-[1em] md:text-[1.25em] font-light mt-1 uppercase leading-[1.2em]">
               Frontend developer & UX design
             </h2>
-            <h2 className="leading-[1.125em]  mt-5 text-[1.5em] md:text-[2em]">
+            <h2 className="leading-[1.125em]  mt-5 text-[1.5em] md:text-[2em] md:w-10/12 ">
               Experienced React.js frontend developer merging artistry with data
               for enhanced user experiences on web and app.
             </h2>
-            <div className="flex w-full mt-[12%] pb-10 md:mt-[9%] z-50">
+            <div className="flex w-full mt-[2.5em] pb-10 md:mt-[3.25em] z-50">
               <Link
-                className="text-dark border border-dark rounded-full   pt-[0.125em] pb-[0.15em] px-[1.5em] text-[1.25em] md:text-[1.45em]    tracking-wide shadow-sm transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
+                className="text-dark border-[1.5px] border-dark rounded-full pt-[0.125em] pb-[0.15em] px-[1.5em] lg:px-[1.85em] text-[1.25em] md:text-[1.5em]    tracking-wide shadow-sm transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
                 to="/portfolio"
                 aria-label="portfolio"
               >
@@ -66,45 +69,52 @@ export const LandingOrgansim: FunctionComponent = () => {
 
         <div className="flex flex-col fixed -mt-12 h-max object-cover w-1/2 z-[-9999]  justify-center  items-center ">
           {isMobile && (
-            <ScrollLink to="scroll-section" smooth={true} >
+            <ScrollLink to="scroll-section" smooth={true}>
               <div className=" scroll-section  w-10/12 h-[100%] flex justify-between items-stretch flex-shrink flex-row">
-                <Parallax
-               
-                  translateX={[210, 20]}
-                  translateY={[10, -50]}
-                  className="flex w-auto"
-                >
-                  <div className="w-[95vw] h-[95vw] sm:w-[20em] sm:h-[20em]  lg:-mt-32 relative -mt-[20%] lg:static lg:w-[30vw] lg:h-[30vw] box-2 rounded-full color-background-2  bg-blend-hard-light"></div>
-                </Parallax>
+                <ScrollAnimation
+                  animationClass="fade-in-hero-1-mobile"
+                  reverseAnimationClass="fade-out-hero-1-mobile"
+                  content={
+                    <div className="w-[95vw] h-[95vw] sm:w-[20em] sm:h-[20em]  lg:-mt-32 relative -mt-[20%] lg:static lg:w-[30vw] lg:h-[30vw] box-2 rounded-full color-background-2  bg-blend-hard-light"></div>
+                  }
+                  threshold={0.2}
+                  rootMargin="0px"
+                />
 
-                <Parallax
-                  translateX={["7%", "50%"]}
-                  translateY={["220%", "120%"]}
-                  className="flex w-auto -z-50"
-                >
-                  <div className="w-[85vw] h-[85vw] sm:w-[20em] sm:h-[20em] lg:mt-20 relative mt-[-12%] lg:static lg:w-[30vw] lg:h-[30vw] box rounded-full color-background-1 bg-blend-difference opacity-90   "></div>
-                </Parallax>
+                <ScrollAnimation
+                  animationClass="fade-in-hero-2-mobile"
+                  reverseAnimationClass="fade-out-hero-2-mobile"
+                  content={
+                    <div className="w-[85vw] h-[85vw] sm:w-[20em] sm:h-[20em] lg:mt-20 relative mt-[-12%] lg:static lg:w-[30vw] lg:h-[30vw] box rounded-full color-background-1 bg-blend-difference opacity-90   "></div>
+                  }
+                  threshold={0.7}
+                  rootMargin="0px"
+                />
               </div>
             </ScrollLink>
           )}
           {isTablet && (
-            <ScrollLink to="scroll-section" smooth={true} >
-              <div className=" scroll-section  w-10/12 h-[80%] flex justify-between items-stretch flex-shrink flex-row mt-[1.25em]">
-                <Parallax
-                  translateX={["310%", "30%"]}
-                  translateY={["-90%", "10%"]}
-                  className="flex w-auto"
-                >
-                  <div className="w-[95vw] h-[95vw] sm:w-[95vw] sm:h-[95vw]  lg:-mt-32 relative -mt-[20%] sm:-mt-[30%] lg:static lg:w-[30vw] lg:h-[30vw] box-2 rounded-full color-background-2  bg-blend-hard-light"></div>
-                </Parallax>
+            <ScrollLink to="scroll-section" smooth={true}>
+              <div className=" scroll-section  w-10/12  flex justify-between items-stretch flex-shrink flex-row mt-[1.25em]">
+                <ScrollAnimation
+                  animationClass="fade-in-hero-1-mobile"
+                  reverseAnimationClass="fade-out-hero-1-mobile"
+                  content={
+                    <div className="w-[95vw] h-[95vw] sm:w-[75vw] sm:h-[75vw]  lg:-mt-32 relative -mt-[20%] sm:-mt-[30%] lg:static lg:w-[30vw] lg:h-[30vw] box-2 rounded-full color-background-2  bg-blend-hard-light"></div>
+                  }
+                  threshold={0.2}
+                  rootMargin="0px"
+                />
 
-                <Parallax
-                  translateX={[-30, 60]}
-                  translateY={[120, 200]}
-                  className="flex w-auto -z-50"
-                >
-                  <div className="w-[85vw] h-[85vw] lg:w-[40em] lg:h-[40em] -mt-40   lg:static  box rounded-full color-background-1 bg-blend-difference opacity-90   "></div>
-                </Parallax>
+                <ScrollAnimation
+                  animationClass="fade-in-hero-2-mobile"
+                  reverseAnimationClass="fade-out-hero-2-mobile"
+                  content={
+                    <div className="w-[85vw] h-[85vw]   sm:w-[75vw] sm:h-[75vw] lg:w-[40em] lg:h-[40em] -mt-40   lg:static  box rounded-full color-background-1 bg-blend-difference opacity-90   "></div>
+                  }
+                  threshold={0.4}
+                  rootMargin="0px"
+                />
               </div>
             </ScrollLink>
           )}
@@ -115,21 +125,25 @@ export const LandingOrgansim: FunctionComponent = () => {
               smooth={true}
             >
               <div className=" scroll-section  w-10/12 max-w-[400px] h-[60vh] flex justify-between items-stretch flex-shrink flex-row">
-                <Parallax
-                  translateX={[200, 80]}
-                  translateY={[-30, -20]}
-                  className="flex w-auto"
-                >
-                  <div className="w-[95vw] h-[95vw] sm:w-[30em] sm:h-[30em] relative -mt-[20%] lg:static lg:w-[40vw] lg:h-[40vw] box-2 rounded-full color-background-2  bg-blend-hard-light"></div>
-                </Parallax>
+                <ScrollAnimation
+                  animationClass="fade-in-hero-1"
+                  content={
+                    <div className="w-[95vw] h-[95vw] sm:w-[30em] sm:h-[30em] relative -mt-[20%] lg:static lg:w-[40vw] lg:h-[40vw] box-2 rounded-full color-background-2  bg-blend-hard-light"></div>
+                  }
+                  threshold={0.6}
+                  reverseAnimationClass="fade-out-hero-1"
+                  rootMargin="0px"
+                />
 
-                <Parallax
-                  translateX={[-90, 120]}
-                  translateY={[40, -40]}
-                  className="flex w-auto -z-50"
-                >
-                  <div className="w-[85vw] h-[85vw] sm:w-[30em] sm:h-[30em] lg:mt-20 relative mt-[-6%] lg:static lg:w-[40vw] lg:h-[40vw] box  rounded-full color-background-1 bg-blend-difference opacity-90   "></div>
-                </Parallax>
+                <ScrollAnimation
+                  animationClass="fade-in-hero-2"
+                  reverseAnimationClass="fade-out-hero-2"
+                  content={
+                    <div className="w-[85vw] h-[85vw] sm:w-[30em] sm:h-[30em] lg:mt-20 relative mt-[-6%] lg:static lg:w-[40vw] lg:h-[40vw] box  rounded-full color-background-1 bg-blend-difference opacity-90   "></div>
+                  }
+                  threshold={0.6}
+                  rootMargin="0px"
+                />
               </div>
             </ScrollLink>
           )}
