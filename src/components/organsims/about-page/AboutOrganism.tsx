@@ -90,7 +90,7 @@ export const AboutOrganism = () => {
               translateY={[10, -10]}
             >
               <div className="flex w-[95%] lg:w-9/12  xl:w-10/12 pr-[2em] lg:-mt-8 ">
-                <img src={EmmaImg} alt="Emma Sargeant" className="shadow-md" />
+                <img src={EmmaImg}alt="Emma Sargeant frontend developer" className="shadow-md" />
               </div>
             </Parallax>
           ) : isTablet ? (
@@ -100,7 +100,7 @@ export const AboutOrganism = () => {
               translateY={[8, -8]}
             >
               <div className="flex justify-start  items-start w-7/12 pt-[2em] pb-6 lg:w-9/12 xl:w-10/12 pr-[2em] lg:-mt-8 ">
-                <img src={EmmaImg} alt="Emma Sargeant" className="shadow-md" />
+                <img src={EmmaImg} alt="Emma Sargeant frontend developer" className="shadow-md" />
               </div>
             </Parallax>
           ) : (
@@ -112,7 +112,7 @@ export const AboutOrganism = () => {
               opacity={[1, 0.8]}
             >
               <div className="flex w-10/12 lg:w-full xl:w-11/12 2xl:w-full lg:-mr-10 xl:mr-0 xl:pl-[2em] lg:mt-2 ">
-                <img loading="lazy" src={EmmaImg} alt="Emma Sargeant" className="shadow-md" />
+                <img loading="lazy" src={EmmaImg} alt="Emma Sargeant frontend developer" className="shadow-md" />
               </div>
             </Parallax>
           )}

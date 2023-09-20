@@ -1,7 +1,6 @@
 import { Parallax } from "react-scroll-parallax";
 
 export const SkillsMolecule = ({ skills, searchTerm }: any) => {
-  console.log(searchTerm);
   return (
     <div className="w-full flex flex-col mb-10 pt-12 lg:pt-8">
       <Parallax easing={"easeOut"}  opacity={[0.7, 1]}>
