@@ -9,12 +9,24 @@ const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID || "";
 
 export const ContactFormMolecule: React.FC = () => {
   const [message, setMessage] = useState<string | null>(null);
+  const [email, setEmail] = useState<string>("");
+  const [emailValid, setEmailValid] = useState<boolean | null>(null);
 
   emailjs.init(EMAILJS_USER_ID);
 
+  useEffect(() => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    setEmailValid(emailRegex.test(email));
+  }, [email]);
+
+
+  const handleEmailChange = (event: any) => {
+    setEmail(event.target.value);
+  };
+
   const handleSubmit = useCallback((event: any) => {
     event.preventDefault();
-
     const form = event.currentTarget;
     const btn = form.querySelector('[type="submit"]') as HTMLInputElement;
     btn.value = "Sending...";
@@ -50,9 +62,7 @@ export const ContactFormMolecule: React.FC = () => {
       <Parallax
         className="mx-auto text-[1em] md:text-[1.125em] lg:text-[1em] w-full lg:w-11/12 flex pb-2   flex-col"
         translateY={[3, -3]}
-
         easing={"easeOut"}
-
       >
         <div className="w-[95%] lg:w-10/12 mt-[16%] lg:mt-[20%]">
           <h1 className=" text-[1.75em] lg:text-[2.25em] tracking-wide">
@@ -72,10 +82,7 @@ export const ContactFormMolecule: React.FC = () => {
           opacity={[1, 0.8]}
           translateY={[-3, 3]}
         >
-          <div
-            id="hero-arrow"
-            className="flex pt-8 pb-4 w-10/12 lg:w-full "
-          >
+          <div id="hero-arrow" className="flex pt-8 pb-4 w-10/12 lg:w-full ">
             <DownArrowIcon
               parent_container_id={"hero-arrow"}
               height_size={66}
@@ -109,7 +116,15 @@ export const ContactFormMolecule: React.FC = () => {
               placeholder="Email"
               className=" resize-none placeholder:text-dark placeholder:font-light  text-dark bg-[#FAFAFA] w-full lg:w-11/12 mb-4 max-w-[800px] px-3 py-1.5 border-[1.5px] border-[#221C07]"
               required
+              onChange={handleEmailChange}
             />
+            <div className="flex flex-col w-full lg:w-11/12 -mt-3 mb-2 max-w-[800px]">
+              {emailValid === false && email.length > 2 && (
+                <p className="text-[0.7em] tracking-wide font-light italic text-dark opacity-80">
+                  Please enter a valid email address.
+                </p>
+              )}
+            </div>
           </div>
           <div className="flex-col w-full flex lg:w-2/3">
             <textarea
