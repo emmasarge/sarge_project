@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes,   } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import { Helmet } from "react-helmet";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -16,26 +16,18 @@ import { CookiePolicy } from "./screens/CookiePolicy";
 
 export default function App() {
   return (
-    <ParallaxProvider>
-      <Helmet>
-        <title>Emma Sargeant | Developer</title>
-      </Helmet>
-
-      <Router>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="portfolio" element={<Portfolio />} />
-            <Route path="contact" element={<Contact />} />
-
-            <Route path="about" element={<About />} />
-            <Route path="cookies-policy" element={<CookiePolicy />} />
-
-            <Route path="*" element={<NoPage />} />
-          </Route>
-        </Routes>
-      </Router>
-    </ParallaxProvider>
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+          <Route path="cookies-policy" element={<CookiePolicy />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
