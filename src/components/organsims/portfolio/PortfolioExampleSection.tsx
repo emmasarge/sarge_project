@@ -141,7 +141,8 @@ export const PortfolioExampleSectionOrganism = (
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="w-11/12 text-[1em] md:text-[1.125em] lg:text-[1em] flex flex-col items-start  ">
-        <Parallax easing={"easeOut"}  className="mt-3" opacity={[0.7, 1]}>
+        <Parallax easing={"easeIn"}  opacity={[0.8, 1]} translateY={[4, -4]}
+>
           <div
             id={`${props.companyName}-description-section`}
             className="w-full flex-col "
@@ -167,7 +168,7 @@ export const PortfolioExampleSectionOrganism = (
               {props.projectDescription_1}
             </h2>
             {props.projectDescription_2 && (
-              <h2 className="text-[1.35em] lg:text-[1.75em] mt-4  tracking-wide leading-[1.125em] text-dark">
+              <h2 className="text-[1.35em] lg:text-[1.75em] mt-4 w-[95%] tracking-wide leading-[1.125em] text-dark">
                 {props.projectDescription_2}
               </h2>
             )}
@@ -184,10 +185,12 @@ export const PortfolioExampleSectionOrganism = (
                 ? "mb-0"
                 : "border-b-2 flex w-full border-dark mb-6 md:mb-8 pb-8 md:pb-12 lg:pb-20 "
             }
-            easing={"easeOut"}
-            opacity={[0.7, 1]}
+            easing={"easeIn"}
+            opacity={[0.8, 1]}
+            translateY={[4, -4]}
+
           >
-            <div className="flex flex-col w-full lg:w-11/12 pb-[2em]  mt-[0.75em] xl:mt-[2em]">
+            <div className="flex flex-col w-full lg:w-11/12 pb-[2em]  mt-[0.85em] xl:mt-[2em]">
               <div className="text-[0.95em] w-full lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5  leading-[1.2em] text-dark">
                 {video_1_title}
               </div>
@@ -207,8 +210,9 @@ export const PortfolioExampleSectionOrganism = (
             <div className="w-full  border-b-2 justify-start flex border-[#221C07] pb-[4.5em] lg:pb-[6em] mb-6 lg:mb-12">
               <Parallax
                 className=" flex w-full  "
-                easing={"easeOut"}
-                opacity={[0.7, 1]}
+                easing={"easeIn"}
+                opacity={[0.8, 1]}
+                translateY={[4, -4]}
               >
                 <div className="flex flex-row  md:w-full  items-start justify-center mt-6 lg:mt-16">
                   <>

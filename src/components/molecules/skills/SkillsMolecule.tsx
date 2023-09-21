@@ -3,7 +3,7 @@ import { Parallax } from "react-scroll-parallax";
 export const SkillsMolecule = ({ skills, searchTerm }: any) => {
   return (
     <div className="w-full flex flex-col mb-10 pt-12 lg:pt-8">
-      <Parallax easing={"easeOut"}  opacity={[0.7, 1]}>
+      <Parallax easing={"easeIn"}  opacity={[0.7, 1]}>
         <div className="flex flex-row break-inside-avoid-column w-full  flex-wrap justify-start items-start min-h-fit ">
           {skills?.map((skill: any, index: number) => {
             return (

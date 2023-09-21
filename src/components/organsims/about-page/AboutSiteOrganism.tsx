@@ -5,7 +5,7 @@ export const AboutSiteOrganism = () => {
     <div className="w-11/12 lg:w-10/12 flex flex-col text-[0.85em] lg:text-[0.7em] mt-16 lg:mt-20">
       <Parallax
         className="pb-2"
-        easing={"easeOut"}
+        easing={"easeIn"}
         translateY={[6, -6]}
       >
         <h1 className="text-[1.5em] mt-[0.75em] lg:text-[1.75em] text-dark tracking-wide leading-[1.125em] flex flex-wrap ">

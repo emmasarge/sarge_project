@@ -84,7 +84,7 @@ export const ContactFormMolecule: React.FC = () => {
       <Parallax
         className="mx-auto text-[1em] md:text-[1.125em] lg:text-[1em] w-full lg:w-11/12 flex pb-2   flex-col"
         translateY={[3, -3]}
-        easing={"easeOut"}
+        easing={"easeIn"}
       >
         <div className="w-[95%] lg:w-10/12 mt-[16%] lg:mt-[20%]">
           <h1 className=" text-[1.75em] lg:text-[2.25em] tracking-wide">
@@ -100,7 +100,7 @@ export const ContactFormMolecule: React.FC = () => {
         </div>
         <Parallax
           className="mt-4 pb-8 lg:pt-8"
-          easing={"easeOut"}
+          easing={"easeIn"}
           opacity={[1, 0.8]}
           translateY={[-3, 3]}
         >
@@ -115,7 +115,7 @@ export const ContactFormMolecule: React.FC = () => {
       </Parallax>
       <Parallax
         className="pt-4 w-full justify-start items-start -mt-28 lg:-mt-24 flex flex-col pb-12"
-        easing={"easeOut"}
+        easing={"easeIn"}
         opacity={[1, 0.7]}
         translateY={[-3, 4]}
       >

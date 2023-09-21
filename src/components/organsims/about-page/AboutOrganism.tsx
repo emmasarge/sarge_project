@@ -15,7 +15,7 @@ export const AboutOrganism = () => {
         <div className="flex  text-[1em] md:text-[1.25em] lg:text-[1em] flex-col justify-center w-full lg:w-[70%] h-full items-start mt-1 md:mt-5 lg:mt-[26%]">
           <Parallax
             className="mt-4"
-            easing={"easeInOut"}
+            easing={"easeIn"}
             translateY={[-8, 8]}
           >
             <h1 className="text-[1.5em] lg:mt-8 lg:text-[2em] text-dark tracking-wide leading-[1.2em]">
@@ -30,13 +30,13 @@ export const AboutOrganism = () => {
 
           {isMobile ? (
             <Parallax
-              className="pb-2.5 mb-10 flex"
-              easing={"easeOut"}
-              translateY={[8, 10]}
+              className="pb-2.5 mb-[2em] flex"
+              easing={"easeIn"}
+              translateY={[6, -6]}
             >
               <div
                 id="about-arrow"
-                className="flex pt-8 pb-20 w-full  justify-start items-start"
+                className="flex pt-[5em] pb-[0.5em] w-full  justify-start items-start"
               >
                 <DownArrowIcon
                   parent_container_id={"about-arrow"}
@@ -48,7 +48,7 @@ export const AboutOrganism = () => {
           ) : isTablet ? (
             <Parallax
               className="pb-2.5 flex"
-              easing={"easeOut"}
+              easing={"easeIn"}
               translateY={[8, 10]}
             >
               <div
@@ -65,7 +65,7 @@ export const AboutOrganism = () => {
           ) : (
             <Parallax
               className="pb-2.5 flex"
-              easing={"easeOut"}
+              easing={"easeIn"}
               translateY={[-13, 13]}
             >
               <div
@@ -86,7 +86,7 @@ export const AboutOrganism = () => {
           {isMobile ? (
             <Parallax
               className="flex w-full pt-[16%] pb-1.5 justify-start lg:justify-end"
-              easing={"easeInOut"}
+              easing={"easeIn"}
               translateY={[10, -10]}
             >
               <div className="flex w-[95%] lg:w-9/12  xl:w-10/12 pr-[2em] lg:-mt-8 ">
@@ -96,7 +96,7 @@ export const AboutOrganism = () => {
           ) : isTablet ? (
             <Parallax
               className="flex w-full pt-[1em]  items-start justify-start lg:justify-end"
-              easing={"easeInOut"}
+              easing={"easeIn"}
               translateY={[8, -8]}
             >
               <div className="flex justify-start  items-start w-7/12 pt-[2em] pb-6 lg:w-9/12 xl:w-10/12 pr-[2em] lg:-mt-8 ">
@@ -106,7 +106,7 @@ export const AboutOrganism = () => {
           ) : (
             <Parallax
               className="flex w-full pb-5  justify-start lg:justify-end lg:-mr-10 "
-              easing={"easeInOut"}
+              easing={"easeIn"}
               scale={[0.95, 1]}
               translateY={[-10, 10]}
               opacity={[1, 0.8]}
@@ -121,8 +121,8 @@ export const AboutOrganism = () => {
 
       <div className="flex text-[1em] md:text-[1.125em] lg:text-[0.925em] flex-col lg:flex-row w-11/12 lg:w-10/12 h-max justify-between items-start lg:mt-3 mb-40">
         <Parallax
-          className=" flex mt-[2%] md:mt-[5%] w-[95%] lg:w-10/12 flex-col  items-start  justify-start lg:pr-10"
-          easing={"easeInOut"}
+          className=" flex mt-0 md:mt-[5%] w-[95%] lg:w-10/12 flex-col  items-start  justify-start lg:pr-10"
+          easing={"easeIn"}
           translateY={[-8, 8]}
           opacity={[1, 0.8]}
         >

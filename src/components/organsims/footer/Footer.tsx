@@ -52,6 +52,14 @@ export const FooterOrganism = () => {
                 Github
               </a>
             </div>
+            <div className="mt-2">
+              <Link
+                className=" font-medium uppercase cursor-pointer scale-100 hover:italic  hover:scale-110 transition duration-200 hover:duration-200"
+                to={"/cookies-policy"}
+              >
+                Cookies policy
+              </Link>
+            </div>
           </div>
         </div>
       </div>
