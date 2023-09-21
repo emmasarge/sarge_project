@@ -1,9 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-import { Helmet } from "react-helmet";
-import { ParallaxProvider } from "react-scroll-parallax";
-
 import "./App.css";
 import { Layout } from "./screens/Layout";
 import { Home } from "./screens/Home";
