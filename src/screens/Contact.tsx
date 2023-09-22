@@ -1,10 +1,10 @@
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { ContactFormMolecule } from "../components/molecules/contact-form/ContactFromMolecule";
 
 export const Contact = () => {
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Emma Sargeant | Contact </title>
         <meta
@@ -17,6 +17,6 @@ export const Contact = () => {
           <ContactFormMolecule />
         </div>
       </div>
-    </>
+    </HelmetProvider>
   );
 };

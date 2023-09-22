@@ -1,10 +1,10 @@
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { LandingOrgansim } from "../components/organsims/home-landing/LandingOrganism";
 
 export const Home = () => {
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Emma Sargeant | Frontend Developer </title>
         <meta
@@ -15,6 +15,6 @@ export const Home = () => {
       <div className="flex h-full  mx-auto  min-h-screen max-w-[1900px] justify-center mt-10 flex-col items-center w-full ">
         <LandingOrgansim />
       </div>
-    </>
+    </HelmetProvider>
   );
 };

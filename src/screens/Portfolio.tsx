@@ -3,7 +3,7 @@ import { PortfolioExampleSectionOrganism } from "../components/organsims/portfol
 import { PortfolioHeroOrgansim } from "../components/organsims/portfolio/PortfolioHero";
 import { useApiRequest } from "../hooks/API";
 import { ReactComponent as Spinner } from "../assets/icons/spinner.svg";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export const Portfolio = () => {
   const url = process.env.REACT_APP_API_URL || "";
@@ -19,13 +19,13 @@ export const Portfolio = () => {
 
   if (loading) {
     return (
-      <div className="h-[100vh] min-h-screen max-w-[1900px] mx-auto bg-[#fafafa] justify-center  flex  w-full items-center">
+      <div className=" min-h-screen max-w-[1900px] mx-auto bg-[#fafafa] justify-center  flex  w-full items-center">
         <div className="w-full flex flex-col justify-center">
-          <div className="flex flex-col w-full pt-20  mx-auto">
+          <div className="flex flex-col w-full lg:w-11/12 pt-20  mx-auto">
             <PortfolioHeroOrgansim />
           </div>
-          <div className="mx-auto w-fit pt-4 mb-20">
-            <Spinner className="w-8/12" />
+          <div className="mx-auto w-fit pt-4 pb-20 mb-20">
+            <Spinner className=" max-w-[5em] w-8/12"  />
           </div>
         </div>
       </div>
@@ -56,11 +56,12 @@ export const Portfolio = () => {
     if (indexB === -1) return -1;
 
     return indexA - indexB;
-  };
+  }; 
+   const sortedData = data.sort(customSort);
 
-  const sortedData = data.sort(customSort);
+
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Emma Sargeant | Portfolio & Skills </title>
         <meta
@@ -81,9 +82,8 @@ export const Portfolio = () => {
                     companyDescription={job.company_description}
                     projectDescription_1={job.project_description.paragraph_1}
                     projectDescription_2={job.project_description.paragraph_2}
-                    video_title_1={job.video_title_1}
                     videos={job.project_videos}
-                    video_url_1={job.video_url_1}
+                 
                   />
                 </div>
               );
@@ -92,6 +92,6 @@ export const Portfolio = () => {
           <SkillListSearchMolecule />
         </div>
       </div>
-    </>
+    </HelmetProvider>
   );
 };

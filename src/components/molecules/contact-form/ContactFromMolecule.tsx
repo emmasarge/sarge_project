@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useState } from "react";
 import emailjs, { EmailJSResponseStatus } from "emailjs-com";
 import { Parallax } from "react-scroll-parallax";
-import { DownArrowIcon } from "../icon-components/DownArrowIcon";
+import { DownArrowIconMolecule } from "../icon-components/DownArrowIconMolecule";
 
 const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID || "";
 const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "";
@@ -80,48 +80,42 @@ export const ContactFormMolecule: React.FC = () => {
   }, [handleSubmit]);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center py-20">
+    <div className="w-full flex flex-col justify-center items-center pb-20 lg:pb-20">
       <Parallax
-        className="mx-auto text-[1em] md:text-[1.125em] lg:text-[1em] w-full lg:w-11/12 flex pb-2   flex-col"
+        className="mx-auto text-[1em]  md:text-[1.125em] lg:text-[1em] w-full lg:w-11/12 flex pb-2 min-h-[70vh] md:min-h-[65vh] lg:min-h-[60vh]  xl:min-h-min xl:pt-[8em] justify-end flex-col"
         translateY={[3, -3]}
         easing={"easeIn"}
       >
-        <div className="w-[95%] lg:w-10/12 mt-[16%] lg:mt-[20%]">
-          <h1 className=" text-[1.75em] lg:text-[2.25em] tracking-wide">
+        <div className="w-[95%]   md:w-1full  max-w-[1200px] h-full lg:min-h-[20vh] flex flex-col lg:mt-4 justify-center">
+        <h1 className=" text-[1.5em] lg:mt-3 lg:text-[2em] tracking-wide leading-[1.125em]">
             Contact.
           </h1>
-          <h2 className=" text-[1.5em] lg:text-[2em] tracking-wide leading-[1.125em]">
+          <h2 className=" text-[1.35em] mt-3 lg:text-1.75em] tracking-wide leading-[1.125em]">
             Please feel free to use the form below to get in touch, request a
-            resume, or ask any questions.
+            resume, or ask any questions. Emma is currently available for freelance web and app development.
           </h2>
-          <h2 className=" text-[1.5em] mt-3 lg:text-[2em] tracking-wide leading-[1.125em]">
-            Emma is currently available for freelance web and app development.
-          </h2>
-        </div>
-        <Parallax
-          className="mt-4 pb-8 lg:pt-8"
+        
+          <Parallax
+          className="mt-4 mb-5 pb-8 pt-2 lg:pt-4 lg:pb-0"
           easing={"easeIn"}
           opacity={[1, 0.8]}
           translateY={[-3, 3]}
         >
-          <div id="hero-arrow" className="flex pt-8 pb-4 w-10/12 lg:w-full ">
-            <DownArrowIcon
-              parent_container_id={"hero-arrow"}
-              height_size={66}
-              width_size={18}
-            />
-          </div>
+              <div className="w-[1em] lg:w-[1.125em] mt-[1em]  lg:mb-[1em]">
+                <DownArrowIconMolecule /></div>
         </Parallax>
+        </div>
+       
       </Parallax>
       <Parallax
-        className="pt-4 w-full justify-start items-start -mt-28 lg:-mt-24 flex flex-col pb-12"
+        className="pt-4 w-full justify-start items-start flex flex-col pb-12"
         easing={"easeIn"}
         opacity={[1, 0.7]}
-        translateY={[-3, 4]}
+        translateY={[-3, 3]}
       >
         <form
           id="contact-form"
-          className="lg:mt-[1em] mb-20 text-[1.25em] lg:text-[1.125em] w-full  lg:w-11/12 flex flex-col lg:flex-row mx-auto justify-start items-start"
+          className="lg:mt-[0.2em] mb-20 text-[1.25em] lg:text-[1.125em] w-full  lg:w-11/12 flex flex-col lg:flex-row mx-auto justify-start items-start"
         >
           <div className="flex-col w-full lg:w-1/3">
             <input

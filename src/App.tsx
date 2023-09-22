@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import "./index.css";
+
 import { Layout } from "./screens/Layout";
 import { Home } from "./screens/Home";
 import { NoPage } from "./screens/NoPage";

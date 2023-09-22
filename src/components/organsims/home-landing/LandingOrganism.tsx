@@ -48,9 +48,9 @@ export const LandingOrgansim: FunctionComponent = () => {
               Emma Sargeant
             </h1>
 
-            <h2 className=" text-[1em] md:text-[1.25em] font-light mt-1 uppercase leading-[1.2em]">
+            <h1 className=" text-[1em] md:text-[1.25em] font-light mt-1 uppercase leading-[1.2em]">
               Frontend developer & UX design
-            </h2>
+            </h1>
             <h2 className="leading-[1.125em]  mt-5 text-[1.5em] md:text-[2em] md:w-10/12 ">
               Experienced React.js frontend developer merging artistry with data
               for enhanced user experiences on web and app.

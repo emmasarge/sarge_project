@@ -1,9 +1,9 @@
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { AboutOrganism } from "../components/organsims/about-page/AboutOrganism";
 import { AboutSiteOrganism } from "../components/organsims/about-page/AboutSiteOrganism";
 export const About = () => {
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Emma Sargeant | About </title>
         <meta
@@ -17,6 +17,6 @@ export const About = () => {
           <AboutSiteOrganism />
         </div>
       </div>
-    </>
+    </HelmetProvider>
   );
 };

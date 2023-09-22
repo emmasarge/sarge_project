@@ -37,11 +37,10 @@ export const ScrollAnimation = ({
       if (newScrollDirection !== scrollDirection) {
         setScrollDirection(newScrollDirection);
 
-        // Update the current duration based on the direction
         if (newScrollDirection === "reverse") {
-          setCurrentForwardDuration(reverseDuration || "3s");
+          setCurrentForwardDuration(reverseDuration || "5s");
         } else {
-          setCurrentReverseDuration(forwardDuration || "3s");
+          setCurrentReverseDuration(forwardDuration || "5s");
         }
       }
 

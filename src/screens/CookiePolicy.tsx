@@ -1,9 +1,9 @@
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { CookiePolicyOrganism } from "../components/organsims/cookie-policy/CookiePolicyOrganism";
 
 export const CookiePolicy=()=>{
         return (
-            <>
+            <HelmetProvider>
               <Helmet>
                 <title>Emma Sargeant | Cookie Policy </title>
                 <meta
@@ -16,7 +16,7 @@ export const CookiePolicy=()=>{
                     <CookiePolicyOrganism/>
                 </div>
               </div>
-            </>
+            </HelmetProvider>
           );
     
 }

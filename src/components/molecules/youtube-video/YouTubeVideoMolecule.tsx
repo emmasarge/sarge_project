@@ -10,7 +10,7 @@ interface YouTubeVideoMoleculeProps {
 
 export const YouTubeVideoMolecule = (props: YouTubeVideoMoleculeProps) => {
   return (
-    <div className="flex w-full player-wrapper  ">
+    <div className="flex w-full player-wrapper max-w-[1700px] max-h-[750px]  ">
       <ReactPlayer
         loading="lazy"
         url={props.embedURL}

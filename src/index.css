@@ -171,7 +171,6 @@ code {
   left: 0;
   right: 0;
   background-color: #fafafa;
-  z-index: 100;
 }
 
 .html5-video-player:not(.ytp-transparent),
@@ -381,8 +380,6 @@ ul.custom-list li::before {
 }
 
 
-
-
 .fade-in-hero-1-mobile {
   transform: translateX(90vw) translateY(-10vh);
   animation: TranslateHero1Mobile 8s ease-in-out forwards;
@@ -451,4 +448,9 @@ ul.custom-list li::before {
   to {
     transform: translateX(10vw) translateY(70vh); /* Return to initial position */
   }
+}
+
+.down-arrow-icon {
+  width: 100%;
+  height: auto;
 }

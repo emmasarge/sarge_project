@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { Parallax } from "react-scroll-parallax";
-import { DownArrowIcon } from "../../molecules/icon-components/DownArrowIcon";
 import EmmaImg from "../../../assets/images/emma_sparrow_cabin.jpg";
 import useIsMobile from "../../../hooks/IsMobile";
 import useDeviceDetect from "../../../utils/DeviceDetect";
+import { DownArrowIconMolecule } from "../../molecules/icon-components/DownArrowIconMolecule";
 
 export const AboutOrganism = () => {
   const { isTablet } = useDeviceDetect();
@@ -11,10 +11,10 @@ export const AboutOrganism = () => {
 
   return (
     <div className="flex flex-col justify-between items-center w-full h-min">
-      <div className="flex flex-col-reverse lg:flex-row w-11/12 lg:w-10/12 lg:mt-10 h-max justify-start items-start">
+      <div className="flex flex-col-reverse lg:flex-row w-11/12 lg:w-10/12 lg:mt-10 h-max justify-start items-start 2xl:min-h-[80vh] lg:pb-[0.5em]">
         <div className="flex  text-[1em] md:text-[1.25em] lg:text-[1em] flex-col justify-center w-full lg:w-[70%] h-full items-start mt-1 md:mt-5 lg:mt-[26%]">
           <Parallax
-            className="mt-4"
+            className="pt-5 lg:pt-0 lg:-mt-[6%] h-max"
             easing={"easeIn"}
             translateY={[-8, 8]}
           >
@@ -27,77 +27,54 @@ export const AboutOrganism = () => {
               SEO, and UX/UI design.
             </h1>
           </Parallax>
+      
 
           {isMobile ? (
             <Parallax
-              className="pb-2.5 mb-[2em] flex"
+              className="pb-2.5 mb-[3em] flex"
               easing={"easeIn"}
-              translateY={[6, -6]}
+              translateY={[-4, 4]}
             >
-              <div
-                id="about-arrow"
-                className="flex pt-[5em] pb-[0.5em] w-full  justify-start items-start"
-              >
-                <DownArrowIcon
-                  parent_container_id={"about-arrow"}
-                  height_size={66}
-                  width_size={18}
-                />
-              </div>
+                <div className="w-[1em] pt-[2.5em] pb-[6em]">
+                <DownArrowIconMolecule /></div>
             </Parallax>
           ) : isTablet ? (
             <Parallax
-              className="pb-2.5 flex"
+              className="pb-1 mb-[1.5em] flex"
               easing={"easeIn"}
-              translateY={[8, 10]}
+              translateY={[-7, 7]}
             >
-              <div
-                id="about-arrow"
-                className="flex pt-10 w-full  justify-start items-start"
-              >
-                <DownArrowIcon
-                  parent_container_id={"about-arrow"}
-                  height_size={66}
-                  width_size={18}
-                />
-              </div>
+                 <div className="w-[1em] pt-[2.5em] pb-[3em]">
+                <DownArrowIconMolecule /></div>
             </Parallax>
           ) : (
             <Parallax
-              className="pb-2.5 flex"
+              className="pb-4 flex"
               easing={"easeIn"}
               translateY={[-13, 13]}
             >
-              <div
-                id="about-arrow"
-                className="flex pt-6 w-full mt-10  justify-start items-start"
-              >
-                <DownArrowIcon
-                  parent_container_id={"about-arrow"}
-                  height_size={66}
-                  width_size={18}
-                />
-              </div>
+                  <div className="w-[1.125em] mt-[4em] pb-[4em]">
+                <DownArrowIconMolecule /></div>
             </Parallax>
           )}
         </div>
 
-        <div className="flex flex-col w-full lg:w-1/2 justify-center lg:justify-end items-center lg:items-end">
+        <div className="flex flex-col w-full lg:w-1/2 justify-center lg:justify-end items-start lg:items-end">
           {isMobile ? (
             <Parallax
-              className="flex w-full pt-[16%] pb-1.5 justify-start lg:justify-end"
+              className="flex w-full pt-[6%] pb-1.5 justify-start "
               easing={"easeIn"}
-              translateY={[10, -10]}
+              translateY={[4, -4]}
             >
-              <div className="flex w-[95%] lg:w-9/12  xl:w-10/12 pr-[2em] lg:-mt-8 ">
+              <div className="flex w-[95%] lg:w-9/12  xl:w-10/12 pr-[2em] pb-4 lg:-mt-8 ">
                 <img src={EmmaImg}alt="Emma Sargeant frontend developer" className="shadow-md" />
               </div>
             </Parallax>
           ) : isTablet ? (
             <Parallax
-              className="flex w-full pt-[1em]  items-start justify-start lg:justify-end"
+              className="flex w-full pt-[1em]  items-start justify-start "
               easing={"easeIn"}
-              translateY={[8, -8]}
+              translateY={[6, -6]}
             >
               <div className="flex justify-start  items-start w-7/12 pt-[2em] pb-6 lg:w-9/12 xl:w-10/12 pr-[2em] lg:-mt-8 ">
                 <img src={EmmaImg} alt="Emma Sargeant frontend developer" className="shadow-md" />
@@ -105,7 +82,7 @@ export const AboutOrganism = () => {
             </Parallax>
           ) : (
             <Parallax
-              className="flex w-full pb-5  justify-start lg:justify-end lg:-mr-10 "
+              className="flex w-[95%] xl:w-full pb-5  justify-start lg:justify-end lg:-mr-6  xl:mr-0 "
               easing={"easeIn"}
               scale={[0.95, 1]}
               translateY={[-10, 10]}
@@ -119,7 +96,7 @@ export const AboutOrganism = () => {
         </div>
       </div>
 
-      <div className="flex text-[1em] md:text-[1.125em] lg:text-[0.925em] flex-col lg:flex-row w-11/12 lg:w-10/12 h-max justify-between items-start lg:mt-3 mb-40">
+      <div className="flex text-[1em] md:text-[1.125em] lg:text-[0.925em] flex-col lg:flex-row w-11/12 lg:w-10/12 h-max justify-between mt-4 items-start lg:mt-3 mb-40">
         <Parallax
           className=" flex mt-0 md:mt-[5%] w-[95%] lg:w-10/12 flex-col  items-start  justify-start lg:pr-10"
           easing={"easeIn"}
@@ -172,7 +149,7 @@ export const AboutOrganism = () => {
         </Parallax>
 
 
-        <div className="mt-[12em] sm:mt-[12em] md:mt-[9em] lg:mt-6 flex flex-col w-full lg:w-[35%] lg:bg-mustard lg:px-5 lg:pb-6 lg:sticky lg:justify-end lg:items-end  lg:top-28 pt-12 lg:pt-2 lg:shadow-md lg:rounded-[3px] border-t-2 lg:-mr-10 lg:border-0 border-dark ">
+        <div className="mt-[12em] sm:mt-[12em] md:mt-[9em] lg:mt-6 flex flex-col w-full lg:w-[35%] lg:bg-mustard lg:px-5 lg:pb-6 lg:sticky lg:justify-end lg:items-end  lg:top-36 pt-12 lg:pt-8 lg:mt-6 lg:shadow-md lg:rounded-[3px] border-t-2 lg:-mr-10 lg:border-0 border-dark ">
           <div className="text-[1em] md:text-[1.125em] lg:text-[0.85em] lg:pl-2 lg:mx-auto">
             <p className="text-[1.35em] mt-[0.5em] lg:text-[1.65em] text-dark tracking-wide leading-[1.125em]">
               Emma is available for freelance projects.

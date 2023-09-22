@@ -26,14 +26,8 @@ interface PortfolioExampleSectionOrganismProps {
   projectDescription_2: string;
   companyURL: string;
   videos: VideoProps;
-
-  video_title_1: string;
-  video_url_1: string;
-  video_title_2?: string;
-  video_url_2?: string;
-  video_title_3?: string;
-  video_url_3?: string;
 }
+
 export const PortfolioExampleSectionOrganism = (
   props: PortfolioExampleSectionOrganismProps
 ) => {
@@ -98,17 +92,21 @@ export const PortfolioExampleSectionOrganism = (
     return url;
   };
 
+  useEffect(() => {
+    const currentUrl = window.location.href;
 
-    useEffect(() => {
-      const currentUrl = window.location.href;
-    
-      if (currentUrl === 'http://localhost:3000/portfolio#skills-section' || currentUrl === 'https://emmasarge-developer.netlify.app/portfolio#skills-section' || currentUrl === 'https://emmasarge-developer.com/portfolio#skills-section') {
-        const skillsSection = document.getElementById("skills-section");
-        if (skillsSection) {
-          skillsSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
-        }
+    if (
+      currentUrl === "http://localhost:3000/portfolio#skills-section" ||
+      currentUrl ===
+        "https://emmasarge-developer.netlify.app/portfolio#skills-section" ||
+      currentUrl === "https://emmasarge-developer.com/portfolio#skills-section"
+    ) {
+      const skillsSection = document.getElementById("skills-section");
+      if (skillsSection) {
+        skillsSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
-    }, []);
+    }
+  }, []);
 
   useEffect(() => {
     if (isMobile) {
@@ -133,16 +131,15 @@ export const PortfolioExampleSectionOrganism = (
   }, [intitialWindowWidth, intitialWindowHeight, isMobile, isTablet]);
 
   useEffect(() => {
-    if (video_2_url && video_3_url) {
+    if (video_2_url !== undefined && video_3_url !== undefined) {
       setMultipleVideos(true);
     }
   }, [video_2_url, video_3_url]);
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <div className="w-11/12 text-[1em] md:text-[1.125em] lg:text-[1em] flex flex-col items-start  ">
-        <Parallax easing={"easeIn"}  opacity={[0.8, 1]} translateY={[4, -4]}
->
+      <div className="w-11/12 text-[1.125em] md:text-[1.125em] lg:text-[1em] flex flex-col items-start  ">
+        <Parallax easing={"easeIn"} opacity={[0.8, 1]} translateY={[4, -4]}>
           <div
             id={`${props.companyName}-description-section`}
             className="w-full flex-col "
@@ -188,7 +185,6 @@ export const PortfolioExampleSectionOrganism = (
             easing={"easeIn"}
             opacity={[0.8, 1]}
             translateY={[4, -4]}
-
           >
             <div className="flex flex-col w-full lg:w-11/12 pb-[2em]  mt-[0.85em] xl:mt-[2em]">
               <div className="text-[0.95em] w-full lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5  leading-[1.2em] text-dark">
@@ -308,7 +304,7 @@ export const PortfolioExampleSectionOrganism = (
                   embedURL={video_1_url}
                   embedWidth={"90vw"}
                   embedHeight={"44vw"}
-                  controls  = {true}
+                  controls={true}
                 />
               </div>
             ) : isTablet ? (
@@ -317,7 +313,7 @@ export const PortfolioExampleSectionOrganism = (
                   embedURL={video_1_url}
                   embedWidth={"90vw"}
                   embedHeight={"44vw"}
-                  controls  = {true}
+                  controls={true}
                 />
               </div>
             ) : (
