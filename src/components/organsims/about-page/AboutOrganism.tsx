@@ -149,7 +149,7 @@ export const AboutOrganism = () => {
         </Parallax>
 
 
-        <div className="mt-[12em] sm:mt-[12em] md:mt-[9em] lg:mt-6 flex flex-col w-full lg:w-[35%] lg:bg-mustard lg:px-5 lg:pb-6 lg:sticky lg:justify-end lg:items-end  lg:top-36 pt-12 lg:pt-8 lg:mt-6 lg:shadow-md lg:rounded-[3px] border-t-2 lg:-mr-10 lg:border-0 border-dark ">
+        <div className="mt-[12em] sm:mt-[12em] md:mt-[9em] lg:mt-6 flex flex-col w-full lg:w-[35%] lg:bg-mustard lg:px-5 lg:pb-6 lg:sticky lg:justify-end lg:items-end  lg:top-36 pt-12 lg:pt-8  lg:shadow-md lg:rounded-[3px] border-t-2 lg:-mr-10 lg:border-0 border-dark ">
           <div className="text-[1em] md:text-[1.125em] lg:text-[0.85em] lg:pl-2 lg:mx-auto">
             <p className="text-[1.35em] mt-[0.5em] lg:text-[1.65em] text-dark tracking-wide leading-[1.125em]">
               Emma is available for freelance projects.
