@@ -137,7 +137,7 @@ export const PortfolioExampleSectionOrganism = (
   }, [video_2_url, video_3_url]);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center">
+    <div className="w-full flex flex-col justify-center items-center ">
       <div className="w-11/12 text-[1.125em] md:text-[1.125em] lg:text-[1em] flex flex-col items-start  ">
         <Parallax easing={"easeIn"} opacity={[0.8, 1]} translateY={[4, -4]}>
           <div
@@ -174,7 +174,7 @@ export const PortfolioExampleSectionOrganism = (
 
         <div
           id={`${props.companyName}-video-section`}
-          className="flex w-full flex-col  mt-10 md:mt-12 lg:mt-16 lg:mb-4  items-start justify-between"
+          className="flex w-full flex-col  mt-10 md:mt-12 lg:mt-16 lg:mb-4 items-start justify-between"
         >
           <Parallax
             className={
@@ -192,18 +192,22 @@ export const PortfolioExampleSectionOrganism = (
               </div>
               <div
                 onClick={openModal}
-                className="flex w-full lg:w-[97%] cursor-pointer"
+                className="flex w-full lg:w-[97%] max-w-[1700px]  cursor-pointer"
               >
                 <YouTubeVideoMolecule
                   embedURL={video_1_url}
                   embedWidth={reducedWidth * 0.97}
                   embedHeight={reducedHeight * 0.9}
+                  maxHeight="700px"
+
+                  
                 />
               </div>
             </div>
           </Parallax>
           {multipleVideos && (
-            <div className="w-full  border-b-2 justify-start flex border-[#221C07] pb-[4.5em] lg:pb-[6em] mb-6 lg:mb-12">
+            <div className="flex w-full border-[#221C07] border-b-2   2xl:mt-[2em] pb-[4.5em] lg:pb-[4em] mb-6 lg:mb-12">
+            <div className="w-full flex h-max max-w-[1200px] justify-start ">
               <Parallax
                 className=" flex w-full  "
                 easing={"easeIn"}
@@ -214,7 +218,7 @@ export const PortfolioExampleSectionOrganism = (
                   <>
                     {video_2_url !== undefined && video_2_title && (
                       <div className="flex w-full flex-col mr-3 md:-mr-3 lg:mr-[2em]">
-                        <div className="text-[0.95em] min-h-[2.5em] flex  items-end md:min-h-[1.125em] lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5 leading-[1.2em] text-dark">
+                        <div className="text-[0.95em] min-h-[2.5em] flex  items-end md:min-h-[1.125em]  lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5 lg;mb-1 leading-[1.2em] text-dark">
                           {video_2_title}
                         </div>
                         <div
@@ -222,6 +226,7 @@ export const PortfolioExampleSectionOrganism = (
                           className="flex w-full lg:w-9/12  cursor-pointer "
                         >
                           {isMobile ? (
+                            
                             <YouTubeVideoMolecule
                               embedURL={
                                 video_2_url !== undefined ? video_2_url : ""
@@ -229,6 +234,7 @@ export const PortfolioExampleSectionOrganism = (
                               embedWidth={reducedWidth / 2.35}
                               embedHeight={reducedHeight * 1.65}
                             />
+
                           ) : isTablet ? (
                             <YouTubeVideoMolecule
                               embedURL={
@@ -238,16 +244,19 @@ export const PortfolioExampleSectionOrganism = (
                               embedHeight={reducedHeight * 1.5}
                             />
                           ) : (
+                            <div className="flex max-w-[390px]  pb-20 h-fit max-h-[300px]">
                             <YouTubeVideoMolecule
                               embedURL={
                                 video_2_url !== undefined ? video_2_url : ""
                               }
                               embedWidth={reducedWidth / 3.95}
+                              maxHeight="830px"
                               embedHeight={reducedHeight * 1.125}
-                            />
+                            /></div>
                           )}
                         </div>
                       </div>
+                      
                     )}
                   </>
                   <>
@@ -277,13 +286,16 @@ export const PortfolioExampleSectionOrganism = (
                               embedHeight={reducedHeight * 1.5}
                             />
                           ) : (
+                            <div className="flex max-w-[390px] pb-20 h-fit ">
+
                             <YouTubeVideoMolecule
                               embedURL={
                                 video_3_url !== undefined ? video_3_url : ""
                               }
                               embedWidth={reducedWidth / 3.95}
                               embedHeight={reducedHeight * 1.125}
-                            />
+                              maxHeight="830px"
+                            /></div>
                           )}
                         </div>
                       </div>
@@ -292,7 +304,9 @@ export const PortfolioExampleSectionOrganism = (
                 </div>
               </Parallax>
             </div>
+            </div>
           )}
+          
         </div>
       </div>
       <>

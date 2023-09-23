@@ -10,7 +10,7 @@ export const AboutOrganism = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="flex flex-col justify-between items-center w-full h-min">
+    <div className="flex flex-col justify-between items-center w-full h-full">
       <div className="flex flex-col-reverse lg:flex-row w-11/12 lg:w-10/12 lg:mt-10 h-max justify-start items-start 2xl:min-h-[80vh] lg:pb-[0.5em]">
         <div className="flex  text-[1em] md:text-[1.25em] lg:text-[1em] flex-col justify-center w-full lg:w-[70%] h-full items-start mt-1 md:mt-5 lg:mt-[26%]">
           <Parallax
