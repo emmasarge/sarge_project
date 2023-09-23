@@ -68,6 +68,8 @@ export const Portfolio = () => {
           name="description"
           content="Emma Sargeant is an experienced frontend developer. She builds web and mobile iOS and Android apps using React, React Native, Python, MongoDB, Shopify and more.  "
         />
+        <link rel="canonical" href="https://emmasarge-developer.com/portfolio"/>
+
       </Helmet>
       <div className="w-full max-w-[1900px] mx-auto flex flex-col justify-center items-center min-h-screen py-20  overflow-y-scroll">
         <div className="flex flex-col w-full  lg:w-11/12 mx-auto">
