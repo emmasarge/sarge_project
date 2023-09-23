@@ -7,7 +7,7 @@
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
 
-    Permissions-Policy = "ch-ua-form-factor none"
+    Permissions-Policy = "ch-ua-form-factor 'none'; geolocation 'self'; microphone 'self'; camera 'self'; encrypted-media 'self'"
 
 
 
