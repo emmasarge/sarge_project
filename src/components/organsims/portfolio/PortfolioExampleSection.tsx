@@ -206,7 +206,7 @@ export const PortfolioExampleSectionOrganism = (
             </div>
           </Parallax>
           {multipleVideos && (
-            <div className="flex w-full border-[#221C07] border-b-2   2xl:mt-[2em] pb-[4.5em] lg:pb-[4em] mb-6 lg:mb-12">
+            <div className="flex w-full border-[#221C07] border-b-2   2xl:mt-[2em] pb-[4.5em] lg:pb-[2em] mb-6 lg:mb-12">
             <div className="w-full flex h-max max-w-[1200px] justify-start ">
               <Parallax
                 className=" flex w-full  "
