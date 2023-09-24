@@ -2,26 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Minimalist';
-  src: url('/public/assets/fonts/Minimalist-Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Minimalist';
-  src: url('/public/assets/fonts/Minimalist-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Minimalist';
-  src: url('/public/assets/fonts/Minimalist-DemiBold.woff') format('woff');
-  font-weight: medium;
-  font-style: normal;
-}
 
 body {
   margin: 0;
