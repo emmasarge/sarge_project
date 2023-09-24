@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Parallax } from "react-scroll-parallax";
-import EmmaImg from "../../../assets/images/emma_sparrow_cabin.jpg";
+import EmmaImg from "../../../assets/images/emma_sparrow_cabin.webp";
 import useDeviceDetect from "../../../utils/DeviceDetect";
 import { DownArrowIconMolecule } from "../../molecules/icon-components/DownArrowIconMolecule";
 
