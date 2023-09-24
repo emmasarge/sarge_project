@@ -6,26 +6,23 @@ export const useApiRequest = (url: string) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    function checkLocation() {
-      var requestOptions: RequestInit = {
-        method: "GET",
-        redirect: "follow" as RequestRedirect, // Explicitly specify the correct type
-      };
-
-      fetch(url, requestOptions)
-        .then(response => response.json())
-        .then((result) => {
-         
-          setData(result);
-          setLoading(false);
-        })
-        .catch((error) => {
-          setError("An error occurred while fetching the data.");
-          setLoading(false);
-        });
+    async function fetchData() {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const result = await response.json();
+        setData(result);
+        setError(null);
+      } catch (err) {
+        setError("An error occurred while fetching the data.");
+      } finally {
+        setLoading(false);
+      }
     }
 
-    checkLocation();
+    fetchData();
   }, [url]);
 
   return { data, loading, error };
