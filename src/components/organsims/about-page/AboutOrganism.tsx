@@ -86,7 +86,7 @@ export const AboutOrganism = () => {
               translateY={[-10, 10]}
               opacity={[1, 0.8]}
             >
-              <div className="flex w-full  lg:-mr-10 xl:mr-0 xl:pl-[2em] lg:mt-2 ">
+              <div className="flex w-full   lg:-mr-10 xl:mr-0 xl:pl-[2em] lg:mt-2 xl:-mt-2 ">
                 <img loading="lazy" src={EmmaImg} alt="Emma Sargeant frontend developer" className="shadow-md " />
               </div>
             </Parallax>

@@ -80,17 +80,17 @@ export const ContactFormMolecule: React.FC = () => {
   }, [handleSubmit]);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center pb-20 lg:pb-20">
+    <div className="w-full flex flex-col items-center pb-20  lg:pb-[14em]  lg:pt-[14em]">
       <Parallax
-        className="mx-auto text-[1em]  md:text-[1.125em] lg:text-[1em] w-full lg:w-11/12 flex pb-2 min-h-[70vh] md:min-h-[65vh] lg:min-h-[60vh]  xl:min-h-min xl:pt-[8em] justify-end flex-col"
+        className="mx-auto text-[1em]  md:text-[1.125em] lg:text-[1em] w-full lg:w-11/12 flex pb-2 min-h-[50vh] md:min-h-[30vh] md:max-h-[350px] lg:h-[40vh] lg:max-h-[450px] xl:min-h-min   justify-end flex-col"
         translateY={[3, -3]}
         easing={"easeIn"}
       >
-        <div className="w-[95%]   md:w-1full  max-w-[1200px] h-full lg:min-h-[20vh] flex flex-col lg:mt-4 justify-center">
+        <div className="w-[95%]   md:w-full  max-w-[1200px] h-full lg:min-h-[20vh] flex flex-col lg:mt-4 justify-center">
         <h1 className=" text-[1.5em] lg:mt-3 lg:text-[2em] tracking-wide leading-[1.125em]">
             Contact.
           </h1>
-          <h2 className=" text-[1.35em] mt-3 lg:text-1.75em] tracking-wide leading-[1.125em]">
+          <h2 className=" text-[1.35em] mt-3 lg:text-[1.75em] tracking-wide leading-[1.125em]">
             Please feel free to use the form below to get in touch, request a
             resume, or ask any questions. Emma is currently available for freelance web and app development.
           </h2>

@@ -12,7 +12,7 @@ export const Contact = () => {
         />
       </Helmet>
       <div className="w-full  mx-auto  flex max-w-[1900px] justify-center min-h-screen flex-col">
-        <div className="w-11/12 mx-auto flex justify-center items-center">
+        <div className="w-11/12 mx-auto flex justify-start items-center">
           <ContactFormMolecule />
         </div>
       </div>
