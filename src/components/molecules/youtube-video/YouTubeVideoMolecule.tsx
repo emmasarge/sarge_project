@@ -24,7 +24,6 @@ export const YouTubeVideoMolecule = (props: YouTubeVideoMoleculeProps) => {
         height={props.embedHeight || "100%"}
         width={props.embedWidth || "100%"}
         className="react-player"
-        
       />
     </div>
   );
