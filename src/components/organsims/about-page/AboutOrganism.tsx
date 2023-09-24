@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 import { Parallax } from "react-scroll-parallax";
 import EmmaImg from "../../../assets/images/emma_sparrow_cabin.jpg";
-import useIsMobile from "../../../hooks/IsMobile";
 import useDeviceDetect from "../../../utils/DeviceDetect";
 import { DownArrowIconMolecule } from "../../molecules/icon-components/DownArrowIconMolecule";
 
 export const AboutOrganism = () => {
   const { isTablet, isMobile } = useDeviceDetect();
-  // const isMobile = useIsMobile();
 
   return (
     <div className="flex flex-col justify-between items-center w-full h-full">
