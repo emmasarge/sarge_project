@@ -11,7 +11,7 @@ export const AboutOrganism = () => {
 
   return (
     <div className="flex flex-col justify-between items-center w-full h-full">
-      <div className="flex flex-col-reverse lg:flex-row w-11/12 lg:w-10/12 lg:mt-6 h-max justify-start items-start 2xl:min-h-[60vh] lg:pb-[0.5em]">
+      <div className="flex flex-col-reverse lg:flex-row w-11/12 lg:w-10/12 lg:mt-6 2xl:mt-8 h-max justify-start items-start 2xl:min-h-[30vh] lg:pb-[0.5em]">
         <div className="flex  text-[1em] md:text-[1.25em] lg:text-[1em] flex-col justify-center w-full lg:w-[90%] h-full items-start mt-1 md:mt-5 lg:mt-[26%]">
           <Parallax
             className="pt-5 lg:pt-0 lg:-mt-[6%] h-max w-full flex flex-col"
@@ -21,7 +21,7 @@ export const AboutOrganism = () => {
             <h1 className="text-[1.5em] lg:mt-8 lg:text-[2em] text-dark tracking-wide leading-[1.2em]">
               About.
             </h1>
-            <h1 className="text-[1.35em] mt-[0.5em] lg:text-[1.75em] text-dark sm:w-11/12 tracking-wide leading-[1.125em] flex flex-wrap">
+            <h1 className="text-[1.35em] mt-[0.5em] lg:text-[1.75em] text-dark sm:w-[95%] tracking-wide leading-[1.125em] flex flex-wrap">
               Emma Sargeant is a frontend web and app developer based in London,
               with full-stack knowledge and a background in digital marketing,
               SEO, and UX/UI design.
@@ -66,18 +66,18 @@ export const AboutOrganism = () => {
               easing={"easeIn"}
               translateY={[4, -4]}
             >
-              <div className="flex w-[95%] lg:w-9/12  xl:w-10/12 pr-[2em] pb-4 lg:-mt-8 ">
+              <div className="flex w-[95%] lg:w-9/12  xl:w-10/12 pr-[2em] pb-2 lg:-mt-8 ">
                 <img src={EmmaImg}alt="Emma Sargeant frontend developer" className="shadow-md w-[100%] max-w-[320px] flex  md:max-w-[400px]" />
               </div>
             </Parallax>
           ) : isTablet ? (
             <Parallax
-              className="flex w-full pt-[1em]  items-start justify-start "
+              className="flex w-full pt-[0.55em]  items-start justify-start "
               easing={"easeIn"}
               translateY={[6, -6]}
             >
-              <div className="flex justify-start items-start w-7/12 pt-[2em] pb-6 lg:w-9/12 xl:w-10/12 pr-[2em] lg:-mt-8 ">
-                <img src={EmmaImg} alt="Emma Sargeant frontend developer" className="shadow-md  flex " />
+              <div className="flex justify-start items-start w-7/12 pt-[0.85em] pb-3 lg:w-9/12 xl:w-10/12 pr-[2em] lg:-mt-8 ">
+                <img src={EmmaImg} alt="Emma Sargeant frontend developer" className="shadow-md  flex  max-w-[380px]" />
               </div>
             </Parallax>
           ) : (
