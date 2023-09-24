@@ -158,19 +158,19 @@ export const PortfolioExampleSectionOrganism = (
                 {removeHttps(props.companyURL)}
               </p>
             </a>
-            <h3 className=" text-[1.35em] md:w-[95%] lg:text-[1.75em] tracking-wide leading-[1.125em] text-dark mt-6 ">
+            <h2 className=" text-[1.35em] md:w-[95%] lg:text-[1.75em] tracking-wide leading-[1.125em] text-dark mt-6 ">
               {props.jobTitle}.
-            </h3>
+            </h2>
             <h3 className=" text-[1.125em] md:text-[1.25em] md:w-[95%]  font-light lg:text-[1.35em]  mt-0.5 lg:mt-1 leading-[1.125em] text-dark mb-6 lg:mb-8">
               {props.companyDescription}
             </h3>
-            <h2 className="text-[1.35em] md:w-[95%] lg:text-[1.75em] mt-4 lg:mt-4 tracking-wide leading-[1.125em] text-dark">
+            <h3 className="text-[1.35em] md:w-[95%] lg:text-[1.75em] mt-4 lg:mt-4 tracking-wide leading-[1.125em] text-dark">
               {props.projectDescription_1}
-            </h2>
+            </h3>
             {props.projectDescription_2 && (
-              <h2 className="text-[1.35em] lg:text-[1.75em] mt-4 md:w-[95%] tracking-wide leading-[1.125em] text-dark">
+              <h3 className="text-[1.35em] lg:text-[1.75em] mt-4 md:w-[95%] tracking-wide leading-[1.125em] text-dark">
                 {props.projectDescription_2}
-              </h2>
+              </h3>
             )}
           </div>
         </Parallax>
