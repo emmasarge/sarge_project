@@ -7,10 +7,6 @@ export const CookiePolicy = () => {
       <Helmet>
         <title>Emma Sargeant | Cookie Policy </title>
         <meta name="description" content="Cookie policy." />
-        <link
-          rel="canonical"
-          href="https://emmasarge-developer.com/cookies-policy"
-        />
       </Helmet>
       <div className="w-full  mx-auto  flex max-w-[1900px] justify-center min-h-screen flex-col">
         <div className="w-11/12 mx-auto flex justify-center items-center">
