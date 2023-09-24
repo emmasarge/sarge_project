@@ -6,15 +6,15 @@ import useDeviceDetect from "../../../utils/DeviceDetect";
 import { DownArrowIconMolecule } from "../../molecules/icon-components/DownArrowIconMolecule";
 
 export const AboutOrganism = () => {
-  const { isTablet } = useDeviceDetect();
-  const isMobile = useIsMobile();
+  const { isTablet, isMobile } = useDeviceDetect();
+  // const isMobile = useIsMobile();
 
   return (
     <div className="flex flex-col justify-between items-center w-full h-full">
-      <div className="flex flex-col-reverse lg:flex-row w-11/12 lg:w-10/12 lg:mt-10 h-max justify-start items-start 2xl:min-h-[80vh] lg:pb-[0.5em]">
-        <div className="flex  text-[1em] md:text-[1.25em] lg:text-[1em] flex-col justify-center w-full lg:w-[70%] h-full items-start mt-1 md:mt-5 lg:mt-[26%]">
+      <div className="flex flex-col-reverse lg:flex-row w-11/12 lg:w-10/12 lg:mt-6 h-max justify-start items-start 2xl:min-h-[60vh] lg:pb-[0.5em]">
+        <div className="flex  text-[1em] md:text-[1.25em] lg:text-[1em] flex-col justify-center w-full lg:w-[90%] h-full items-start mt-1 md:mt-5 lg:mt-[26%]">
           <Parallax
-            className="pt-5 lg:pt-0 lg:-mt-[6%] h-max"
+            className="pt-5 lg:pt-0 lg:-mt-[6%] h-max w-full flex flex-col"
             easing={"easeIn"}
             translateY={[-8, 8]}
           >
@@ -59,15 +59,15 @@ export const AboutOrganism = () => {
           )}
         </div>
 
-        <div className="flex flex-col w-full lg:w-1/2 justify-center lg:justify-end items-start lg:items-end">
+        <div className="flex flex-col w-full lg:w-[65%] 2xl:w-1/2 justify-center lg:justify-end items-start lg:items-end">
           {isMobile ? (
             <Parallax
-              className="flex w-full pt-[6%] pb-1.5 justify-start "
+              className="flex w-full pt-[6%] pb-1.5 justify-start  "
               easing={"easeIn"}
               translateY={[4, -4]}
             >
               <div className="flex w-[95%] lg:w-9/12  xl:w-10/12 pr-[2em] pb-4 lg:-mt-8 ">
-                <img src={EmmaImg}alt="Emma Sargeant frontend developer" className="shadow-md" />
+                <img src={EmmaImg}alt="Emma Sargeant frontend developer" className="shadow-md w-[100%] max-w-[320px] flex  md:max-w-[400px]" />
               </div>
             </Parallax>
           ) : isTablet ? (
@@ -76,20 +76,20 @@ export const AboutOrganism = () => {
               easing={"easeIn"}
               translateY={[6, -6]}
             >
-              <div className="flex justify-start  items-start w-7/12 pt-[2em] pb-6 lg:w-9/12 xl:w-10/12 pr-[2em] lg:-mt-8 ">
-                <img src={EmmaImg} alt="Emma Sargeant frontend developer" className="shadow-md" />
+              <div className="flex justify-start items-start w-7/12 pt-[2em] pb-6 lg:w-9/12 xl:w-10/12 pr-[2em] lg:-mt-8 ">
+                <img src={EmmaImg} alt="Emma Sargeant frontend developer" className="shadow-md  flex " />
               </div>
             </Parallax>
           ) : (
             <Parallax
-              className="flex w-[95%] xl:w-full pb-5  justify-start lg:justify-end lg:-mr-6  xl:mr-0 "
+              className="flex w-[95%] lg:w-full pb-5  justify-start lg:justify-end  lg:-mr-2  xl:-mr-4 "
               easing={"easeIn"}
               scale={[0.95, 1]}
               translateY={[-10, 10]}
               opacity={[1, 0.8]}
             >
-              <div className="flex w-10/12 lg:w-full xl:w-11/12 2xl:w-full lg:-mr-10 xl:mr-0 xl:pl-[2em] lg:mt-2 ">
-                <img loading="lazy" src={EmmaImg} alt="Emma Sargeant frontend developer" className="shadow-md" />
+              <div className="flex w-full  lg:-mr-10 xl:mr-0 xl:pl-[2em] lg:mt-2 ">
+                <img loading="lazy" src={EmmaImg} alt="Emma Sargeant frontend developer" className="shadow-md " />
               </div>
             </Parallax>
           )}
@@ -107,7 +107,7 @@ export const AboutOrganism = () => {
             <h2 className="text-[1.35em] md:mt-[0.5em] lg:text-[1.75em] text-dark tracking-wide leading-[1.125em] flex flex-wrap">
               Emma develops responsive apps for web, iOS and Android, built to
               meet business requirements to ensure ease of use and increased
-              conversions. Her experience includes building e-commerce,
+              conversions. Her experience includes working as a frontend developer building e-commerce,
               subscription, SAAS, internal and marketing apps.
             </h2>
             <p className="text-[1.35em] mt-[0.75em] lg:text-[1.75em] text-dark tracking-wide leading-[1.125em] flex flex-wrap">
@@ -120,8 +120,8 @@ export const AboutOrganism = () => {
               of designs and paid ads to monitor ROI.
             </p>
             <p className="text-[1.35em] mt-[0.75em]  lg:text-[1.75em] text-dark tracking-wide leading-[1.125em] ">
-              Emma works with React.js for web, React Native for iOS and
-              Android, Shopify, Webflow, Wordpress and Webflow. Emma also works
+              As a frontend developer, Emma works with React.js for web, React Native for iOS and
+              Android, Shopify, Webflow, Wordpress and Webflow. Emma also has backend experience and works
               with Python and MongoDB to manage databases and to build APIs. She
               implements user behaviour tracking with Google tag manager and
               creates custom events for specific tracking of user interactions
@@ -137,7 +137,7 @@ export const AboutOrganism = () => {
               Contentful, Hubspot, Webflow and more.
             </p>
             <p className="text-[1.35em] mt-[0.75em] lg:text-[1.75em] text-dark tracking-wide leading-[1.125em] flex flex-wrap">
-              Having worked in agile environments, Emma works well with large
+              Having worked in agile environments as a developer, Emma works well with large
               and small teams and she is a self-starter. She is efficient,
               values strong communication to ensure a timely delivery of
               projects, meeting business and customer needs. Emma's diverse

@@ -21,6 +21,7 @@ interface VideoProps {
 }
 interface PortfolioExampleSectionOrganismProps {
   companyName: string;
+  jobTitle: string;
   companyDescription: string;
   projectDescription_1: string;
   projectDescription_2: string;
@@ -153,19 +154,21 @@ export const PortfolioExampleSectionOrganism = (
               <h1 className="text-[1.65em]  cursor-pointer  transition-all ease  duration-300 hover:duration-300  lg:text-[2em] tracking-wide leading-[1.125em] text-dark">
                 {props.companyName}
               </h1>
-              <p className=" w-fit text-[0.9em]  hover:bg-mustard hover:px-2  lg:text-[1.125em] hover:tracking-widest  hover:italic font-normal leading-[1.2em] mt-1 text-dark tracking-wider uppercase mb-6 md:mb-7 lg:mb-8">
+              <p className=" w-fit text-[0.9em]  hover:bg-mustard hover:px-2  lg:text-[1.125em] hover:tracking-widest  hover:italic font-normal leading-[1.2em] mt-1 text-dark tracking-wider uppercase">
                 {removeHttps(props.companyURL)}
               </p>
             </a>
-            <h2 className=" text-[1.35em] w-[95%] lg:text-[1.75em] mt-1.5 tracking-wide leading-[1.125em] text-dark">
+            <h3 className=" text-[1.35em] md:w-[95%] lg:text-[1.75em] tracking-wide leading-[1.125em] text-dark mt-6 ">
+              {props.jobTitle}.
+            </h3>
+            <h3 className=" text-[1.125em] md:text-[1.25em] md:w-[95%]  font-light lg:text-[1.35em]  mt-0.5 lg:mt-1 leading-[1.125em] text-dark mb-6 lg:mb-8">
               {props.companyDescription}
-            </h2>
-
-            <h2 className="text-[1.35em] w-[95%] lg:text-[1.75em] mt-4 lg:mt-4 tracking-wide leading-[1.125em] text-dark">
+            </h3>
+            <h2 className="text-[1.35em] md:w-[95%] lg:text-[1.75em] mt-4 lg:mt-4 tracking-wide leading-[1.125em] text-dark">
               {props.projectDescription_1}
             </h2>
             {props.projectDescription_2 && (
-              <h2 className="text-[1.35em] lg:text-[1.75em] mt-4 w-[95%] tracking-wide leading-[1.125em] text-dark">
+              <h2 className="text-[1.35em] lg:text-[1.75em] mt-4 md:w-[95%] tracking-wide leading-[1.125em] text-dark">
                 {props.projectDescription_2}
               </h2>
             )}
@@ -174,7 +177,7 @@ export const PortfolioExampleSectionOrganism = (
 
         <div
           id={`${props.companyName}-video-section`}
-          className="flex w-full flex-col  mt-10 md:mt-12 lg:mt-16 lg:mb-4 items-start justify-between"
+          className="flex w-full flex-col  mt-4 md:mt-12 lg:mt-142lg:mb-4 items-start justify-between"
         >
           <Parallax
             className={
@@ -187,7 +190,7 @@ export const PortfolioExampleSectionOrganism = (
             translateY={[4, -4]}
           >
             <div className="flex flex-col w-full lg:w-11/12 pb-[2em]  mt-[0.85em] xl:mt-[2em]">
-              <div className="text-[0.95em] w-full lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5  leading-[1.2em] text-dark">
+              <div className="text-[0.85em] w-full lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5  leading-[1.2em] text-dark">
                 {video_1_title}
               </div>
               <div
@@ -218,7 +221,7 @@ export const PortfolioExampleSectionOrganism = (
                   <>
                     {video_2_url !== undefined && video_2_title && (
                       <div className="flex w-full flex-col mr-3 md:-mr-3 lg:mr-[2em]">
-                        <div className="text-[0.95em] min-h-[2.5em] flex  items-end md:min-h-[1.125em]  lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5 lg;mb-1 leading-[1.2em] text-dark">
+                        <div className="text-[0.85em] min-h-[2.5em] flex  items-end md:min-h-[1.125em]  lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5 lg;mb-1 leading-[1.2em] text-dark">
                           {video_2_title}
                         </div>
                         <div
@@ -262,7 +265,7 @@ export const PortfolioExampleSectionOrganism = (
                   <>
                     {video_3_url !== undefined && video_3 && (
                       <div className="flex w-full flex-col  ">
-                        <div className="text-[0.95em] min-h-[2.5em] flex  items-end  md:min-h-[1.125em] lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5  leading-[1.2em] text-dark">
+                        <div className="text-[0.85em] min-h-[2.5em] flex  items-end  md:min-h-[1.125em] lg:text-[0.95em] xl:text-[1.125em] uppercase font-medium tracking-[0.065em] mb-2.5  leading-[1.2em] text-dark">
                           {video_3_title}
                         </div>
                         <div

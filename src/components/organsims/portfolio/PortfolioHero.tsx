@@ -9,16 +9,16 @@ export const PortfolioHeroOrgansim = () => {
     >
       <div className="flex text-[1.125em] md:text-[1.125em] lg:text-[1em] mb-2 flex-col w-11/12 items-start justify-center">
         
-        <div className="max-w-[1600px] xs:pt-[16%] md:pt-[8%] xl:pt-0">
+        <div className="max-w-[1600px] xs:pt-[16%] md:pt-[8%] lg:pt-0">
         <Parallax easing={'easeIn'} translateY={[-8, 8]}>
           <h1 className="text-[1.5em] lg:text-[2em] text-dark tracking-wide leading-[1.2em]">Portfolio and skills.</h1>
           </Parallax>
           <Parallax easing={'easeIn'} translateY={[-8, 8]}>
 
-           <h2 className="text-[1.35em] w-[95%] mt-[1em] max-w-[1200px] lg:text-[1.75em] text-dark tracking-wide leading-[1.125em]">
+           <h2 className="text-[1.35em] md:w-[95%] mt-[1em] max-w-[1200px] lg:text-[1.75em] text-dark tracking-wide leading-[1.125em]">
             With a background in the arts and digital marketing and experience
             working for companies with e-commerce, D2C, B2B, SAAS, white label,
-            internal dashboards and app platforms, Emma offers a valuable
+            internal dashboards and app platforms, Emma is a frontend developer who offers a valuable
             combination of skills to deliver increased conversions to your
             business.
           </h2>

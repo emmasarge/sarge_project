@@ -85,13 +85,16 @@ export const Portfolio = () => {
                     projectDescription_1={job.project_description.paragraph_1}
                     projectDescription_2={job.project_description.paragraph_2}
                     videos={job.project_videos}
+                    jobTitle={job.title}
                  
                   />
                 </div>
               );
             })}
           </div>
+          <div className="w-full justify-center flex">
           <SkillListSearchMolecule />
+          </div>
         </div>
       </div>
     </HelmetProvider>
