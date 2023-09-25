@@ -8,7 +8,7 @@ export const CookiePolicyOrganism = () => {
           Cookies policy.
         </h1>
         <p className="text-[0.85em] mt-1 lg:text-[0.95em] font-light italic text-dark tracking-wide leading-[1.125em] flex flex-wrap">
-          Effective from Thursday, September 21 2023.
+          Effective from Thursday, September 25 2023.
         </p>
       </div>
       <div className="w-11/12 justify-start items-start max-w-[1100px] flex flex-col text-[0.95em]  mb-36">
