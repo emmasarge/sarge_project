@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
 
@@ -10,8 +10,27 @@ import { About } from "./screens/About";
 import { Contact } from "./screens/Contact";
 import ScrollToTop from "./hooks/UseScrollToTop";
 import { CookiePolicy } from "./screens/CookiePolicy";
+import { useTrackingInfo } from "./hooks/SessionTracking";
+import {  TrafficSourceAnalytics } from "./utils/analytics";
 
 export default function App() {
+
+  const { medium, campaign, source } = useTrackingInfo();
+
+  useEffect(() => {
+    function handleLoad() {
+      if (source || medium || campaign) {
+        TrafficSourceAnalytics(source || "", medium || "", campaign || "");
+      }
+    }
+
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, [campaign, medium, source]);
+
   return (
     <Router>
       <ScrollToTop />
@@ -28,3 +47,6 @@ export default function App() {
     </Router>
   );
 }
+
+  
+

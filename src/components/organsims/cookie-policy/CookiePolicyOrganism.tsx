@@ -104,7 +104,7 @@ export const CookiePolicyOrganism = () => {
           </h2>
           <p className="text-[1em] mt-[0.5em] lg:text-[1.35em] text-dark tracking-wide leading-[1.125em] flex flex-wrap">
             Some of our web pages may contain content from third-party websites
-            (e.g., social media buttons, embedded videos) that may use their own
+            (e.g., social media buttons, embedded videos like the ones we use from Youtube) that may use their own
             cookies. We have no control over these cookies and recommend
             reviewing the cookie policies of the respective third-party
             websites.{" "}

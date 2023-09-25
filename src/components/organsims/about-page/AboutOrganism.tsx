@@ -3,6 +3,7 @@ import { Parallax } from "react-scroll-parallax";
 import EmmaImg from "../../../assets/images/emma_sparrow_cabin.webp";
 import useDeviceDetect from "../../../utils/DeviceDetect";
 import { DownArrowIconMolecule } from "../../molecules/icon-components/DownArrowIconMolecule";
+import { ClickPortfolioViewAnalytics } from "../../../utils/analytics";
 
 export const AboutOrganism = () => {
   const { isTablet, isMobile } = useDeviceDetect();
@@ -154,7 +155,7 @@ export const AboutOrganism = () => {
             </p>
             <ul className=" uppercase  font-medium lg:font-light text-[0.8em] leading-[1.3em] lg:text-[0.85em] mt-6 lg:mt-[8%] lg:leading-[1em]   lg:custom-list ">
               <li className=" text-[1.25em] lg:text-[1.5em] mb-1.5 lg:mb-1.5 text-dark tracking-wide leading-[1.125em]">
-                <Link
+                <Link onClick={() => { ClickPortfolioViewAnalytics("about_page") }}
                   className="cursor-pointer hover:px-2 hover:bg-[#F1B417] lg:hover:bg-dark  lg:hover:text-white hover:font-normal hover:py-1 leading-[1.3em] lg:leading-[1.2em]  transition-all duration-300 ease-in-out hover:ease-out hover:duration-150"
                   to="/portfolio"
                 >

@@ -2,6 +2,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { ContactFormMolecule } from "../components/molecules/contact-form/ContactFromMolecule";
 
 export const Contact = () => {
+
   return (
     <HelmetProvider>
       <Helmet>

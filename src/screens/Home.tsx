@@ -2,7 +2,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { LandingOrgansim } from "../components/organsims/home-landing/LandingOrganism";
 
 export const Home = () => {
-
   return (
     <HelmetProvider>
       <Helmet>

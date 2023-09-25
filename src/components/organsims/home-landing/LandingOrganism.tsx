@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import useDeviceDetect from "../../../utils/DeviceDetect";
 import { ScrollAnimation } from "../../molecules/scroll-animation/ScrollAnimation";
+import { ClickPortfolioViewAnalytics } from "../../../utils/analytics";
 
 export const LandingOrgansim: FunctionComponent = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,7 +57,7 @@ export const LandingOrgansim: FunctionComponent = () => {
               for enhanced user experiences on web and app.
             </h2>
             <div className="flex w-full mt-[2.5em] pb-10 md:mt-[3.25em] z-50">
-              <Link
+              <Link onClick={() => { ClickPortfolioViewAnalytics("home_page") }}
                 className="text-dark border-[1.5px] border-dark rounded-full pt-[0.125em] pb-[0.15em] px-[1.5em] lg:px-[1.85em] text-[1.25em] md:text-[1.5em]    tracking-wide shadow-sm transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
                 to="/portfolio"
                 aria-label="portfolio"

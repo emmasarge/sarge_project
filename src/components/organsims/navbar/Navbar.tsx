@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as BurgerMenu } from "../../../assets/icons/burger_bar.svg";
 import { ReactComponent as CloseIcon } from "../../../assets/icons/close.svg";
+import { ClickPortfolioViewAnalytics } from "../../../utils/analytics";
 
 export const NavbarOrganism = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -57,6 +58,7 @@ export const NavbarOrganism = () => {
                 Home
               </Link>
               <Link
+              onClick={() => { ClickPortfolioViewAnalytics("nav_bar") }}
                 className="text-dark font-light mt-4 text-[1.125em] hover:bg-[#F1B417] hover:px-2  uppercase tracking-wide hover:italic transition duration-300 hover:duration-300 hover:scale-105 cursor-pointer"
                 to="/portfolio"
                 aria-label="portfolio"
