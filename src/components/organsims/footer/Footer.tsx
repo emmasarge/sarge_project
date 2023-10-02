@@ -45,16 +45,6 @@ export const FooterOrganism = () => {
               </a>
             </div>
             <div className="mt-2">
-            <span>
-              <a onClick={() => { ClickLinkedInAnalytics(); }}
-                className=" font-medium uppercase cursor-pointer scale-100 hover:italic  hover:scale-110 transition duration-200 hover:duration-200"
-                href={"https://www.linkedin.com/in/emma-sargeant-64572b42/"}
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-              </a>
-            </span>
               <a
                 onClick={() => { ClickViewGitHubAnalytics(); }}
                 className=" font-medium uppercase cursor-pointer scale-100 hover:italic  hover:scale-110 transition duration-200 hover:duration-200"
